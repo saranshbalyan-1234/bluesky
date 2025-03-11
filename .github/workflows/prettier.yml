@@ -26,7 +26,7 @@ jobs:
           command: yarn --frozen-lockfile
           attempt_limit: 3
           attempt_delay: 2000
-      - run: yarn prettier .
+      - run: yarn prettier --write .
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
