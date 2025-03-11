@@ -203,7 +203,7 @@ module.exports = function (config) {
         USE_SENTRY && [
           '@sentry/react-native/expo',
           {
-            organization: 'blueskyweb',
+            organization: 'saranshbalyan123',
             project: 'react-native',
             release: VERSION,
             dist: SENTRY_DIST,
