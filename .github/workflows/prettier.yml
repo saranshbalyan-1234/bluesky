@@ -2,33 +2,121 @@ name: Prettier
 
 on:
   pull_request:
-  push:
-    branches:
-      - main
+    types: [opened, synchronize, edited]
+  workflow_dispatch:
+
 concurrency:
-  group: '${{ github.workflow }}-${{ github.head_ref || github.ref }}'
+  group: ${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  linting:
-    name: Run Prettier
-    runs-on: ubuntu-latest
+  prettier:
+    name: Prettier
+    # if: github.event_name == 'pull_request'
+    runs-on: ubunty-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
     steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v3
-      - name: Install node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-      - name: Yarn install
-        uses: Wandalen/wretry.action@master
-        with:
-          command: yarn --frozen-lockfile
-          attempt_limit: 3
-          attempt_delay: 2000
-      - run: yarn prettier --write .
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Apply formatting changes
-          branch: ${{ github.head_ref }}
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install prettier --legacy-peer-deps
+      
+    - name: Run Prettier
+      run: npx prettier --write .
+
+    - name: Check for changes
+      id: git_status
+      run: |
+        if [ -n "$(git diff --name-only)" ]; then
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Configure Git
+      if: steps.git_status.outputs.has_changes == 'true'
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Pull latest changes from PR
+      if: steps.git_status.outputs.has_changes == 'true' && github.event_name == 'pull_request'
+      run: |
+        git stash
+        git pull origin ${{ github.event.pull_request.head.ref }} --rebase
+        git stash pop
+
+    - name: Pull latest changes from Branch
+      if: steps.git_status.outputs.has_changes == 'true' && github.event_name != 'pull_request'
+      run: |
+        git stash
+        git pull
+        git stash pop
+
+    - name: Commit and push changes to PR
+      if: steps.git_status.outputs.has_changes == 'true' && github.event_name == 'pull_request'
+      run: |
+        git add .
+        git commit -m "chore: apply prettier formatting"
+        git push origin HEAD:refs/heads/${{ github.event.pull_request.head.ref }}
+
+    - name: Commit and push changes to Branch
+      if: steps.git_status.outputs.has_changes == 'true' && github.event_name != 'pull_request'
+      run: |
+        git pull
+        git add .
+        git commit -m "chore: apply prettier formatting"
+        git push
+
+    - name: Add a comment on the PR
+      if: steps.git_status.outputs.has_changes == 'true' && github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const prNumber = context.issue.number;
+          const owner = context.repo.owner;
+          const repo = context.repo.repo;
+          
+          github.rest.issues.createComment({
+            issue_number: prNumber,
+            owner: owner,
+            repo: repo,
+            body: "Prettier formatting was applied to the code in this pull request. Please review the changes."
+          });
+
+    - name: Ensure branch
+      if: steps.git_status.outputs.has_changes == 'true' && github.event_name == 'pull_request'
+      run: |
+        git checkout ${{ github.event.pull_request.head.ref }}
+
+    - name: Get last commit hash
+      if: steps.git_status.outputs.has_changes == 'true'
+      id: get_commit_hash
+      run: echo "commit_hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+    
+    - name: Add a comment to the commit
+      if: steps.git_status.outputs.has_changes == 'true'
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const commitSha = '${{ steps.get_commit_hash.outputs.commit_hash }}';
+          
+          const response = await github.rest.repos.createCommitComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            commit_sha: commitSha,
+            body: "Prettier formatting was applied to this commit."
+          });
+
+    
