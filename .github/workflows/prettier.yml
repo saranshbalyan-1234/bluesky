@@ -36,7 +36,7 @@ jobs:
     # - name: Install dependencies
     #   run: npm install --legacy-peer-deps
 
-    - name: Install Prettier
+    - name: Install dependencies
       # run: npm install prettier
       run: yarn --frozen-lockfile
 
@@ -50,6 +50,7 @@ jobs:
           echo "has_changes=true" >> $GITHUB_OUTPUT
         else
           echo "has_changes=false" >> $GITHUB_OUTPUT
+        fi
 
     - name: Configure Git
       if: steps.git_status.outputs.has_changes == 'true'
