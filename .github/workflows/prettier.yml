@@ -12,7 +12,6 @@ concurrency:
 jobs:
   prettier:
     name: Prettier
-    # if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,16 +19,27 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4 # Use the correct version for checkout
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    # - name: Setup Node.js
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: '20'  # Specify the version of Node.js
+
+    - name: 🔧 Setup Node
+      uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        #node-version: '20'
+        node-version-file: .nvmrc
+        cache: yarn
 
-    - name: Install dependencies
-      run: npm install prettier --legacy-peer-deps
-      
+    # - name: Install dependencies
+    #   run: npm install --legacy-peer-deps
+
+    - name: Install Prettier
+      # run: npm install prettier
+      run: yarn --frozen-lockfile
+
     - name: Run Prettier
       run: npx prettier --write .
 
@@ -40,7 +50,6 @@ jobs:
           echo "has_changes=true" >> $GITHUB_OUTPUT
         else
           echo "has_changes=false" >> $GITHUB_OUTPUT
-        fi
 
     - name: Configure Git
       if: steps.git_status.outputs.has_changes == 'true'
@@ -67,16 +76,40 @@ jobs:
       run: |
         git add .
         git commit -m "chore: apply prettier formatting"
-        git push origin HEAD:refs/heads/${{ github.event.pull_request.head.ref }}
+        git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
     - name: Commit and push changes to Branch
       if: steps.git_status.outputs.has_changes == 'true' && github.event_name != 'pull_request'
       run: |
-        git pull
         git add .
         git commit -m "chore: apply prettier formatting"
         git push
 
+    - name: Ensure branch
+      if: steps.git_status.outputs.has_changes == 'true' && github.event_name == 'pull_request'
+      run: git checkout ${{ github.event.pull_request.head.ref }}
+
+    - name: Get last commit hash
+      id: get_commit_hash
+      run: echo "commit_hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+    - name: Add a comment to the commit
+      if: steps.git_status.outputs.has_changes == 'true'
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const commitSha = '${{ steps.get_commit_hash.outputs.commit_hash }}';
+
+          const response = await github.rest.repos.createCommitComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            commit_sha: commitSha,
+            body: "Prettier formatting was applied to this commit."
+          });
+
+          console.log(response.data);
+          
     - name: Add a comment on the PR
       if: steps.git_status.outputs.has_changes == 'true' && github.event_name == 'pull_request'
       uses: actions/github-script@v6
@@ -93,30 +126,3 @@ jobs:
             repo: repo,
             body: "Prettier formatting was applied to the code in this pull request. Please review the changes."
           });
-
-    - name: Ensure branch
-      if: steps.git_status.outputs.has_changes == 'true' && github.event_name == 'pull_request'
-      run: |
-        git checkout ${{ github.event.pull_request.head.ref }}
-
-    - name: Get last commit hash
-      if: steps.git_status.outputs.has_changes == 'true'
-      id: get_commit_hash
-      run: echo "commit_hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
-    
-    - name: Add a comment to the commit
-      if: steps.git_status.outputs.has_changes == 'true'
-      uses: actions/github-script@v6
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const commitSha = '${{ steps.get_commit_hash.outputs.commit_hash }}';
-          
-          const response = await github.rest.repos.createCommitComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            commit_sha: commitSha,
-            body: "Prettier formatting was applied to this commit."
-          });
-
-    
