@@ -21,20 +21,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4 # Use the correct version for checkout
 
-    # - name: Setup Node.js
-    #   uses: actions/setup-node@v3
-    #   with:
-    #     node-version: '20'  # Specify the version of Node.js
-
     - name: 🔧 Setup Node
       uses: actions/setup-node@v4
       with:
         #node-version: '20'
         node-version-file: .nvmrc
         cache: yarn
-
-    # - name: Install dependencies
-    #   run: npm install --legacy-peer-deps
 
     - name: Install dependencies
       # run: npm install prettier
