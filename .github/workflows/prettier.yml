@@ -13,7 +13,7 @@ jobs:
   prettier:
     name: Prettier
     # if: github.event_name == 'pull_request'
-    runs-on: ubunty-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
