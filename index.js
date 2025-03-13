@@ -8,7 +8,8 @@ import App from '#/App'
 
 if (process.env.NODE_ENV === 'test') {
   LogBox.ignoreAllLogs() // suppress all logs in tests
-} else {LogBox.ignoreLogs(['Require cycle:']) // suppress require-cycle warnings, it's fine
+} else {
+  LogBox.ignoreLogs(['Require cycle:']) // suppress require-cycle warnings, it's fine
 }
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
