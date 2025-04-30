@@ -29,8 +29,8 @@ module.exports = function (_config) {
   const UPDATES_CHANNEL = IS_TESTFLIGHT
     ? 'testflight'
     : IS_PRODUCTION
-      ? 'production'
-      : undefined
+    ? 'production'
+    : undefined
   const UPDATES_ENABLED = !!UPDATES_CHANNEL
 
   const USE_SENTRY = Boolean(process.env.SENTRY_AUTH_TOKEN)
@@ -183,9 +183,9 @@ module.exports = function (_config) {
           : undefined,
         codeSigningMetadata: UPDATES_ENABLED
           ? {
-            keyid: 'main',
-            alg: 'rsa-v1_5-sha256',
-          }
+              keyid: 'main',
+              alg: 'rsa-v1_5-sha256',
+            }
           : undefined,
         checkAutomatically: 'NEVER',
         channel: UPDATES_CHANNEL,
@@ -195,7 +195,7 @@ module.exports = function (_config) {
         'expo-localization',
         [
           'react-native-edge-to-edge',
-          { android: { enforceNavigationBarContrast: false } },
+          {android: {enforceNavigationBarContrast: false}},
         ],
         USE_SENTRY && [
           '@sentry/react-native/expo',
@@ -356,7 +356,7 @@ module.exports = function (_config) {
             },
           },
         ],
-        ['expo-screen-orientation', { initialOrientation: 'PORTRAIT_UP' }],
+        ['expo-screen-orientation', {initialOrientation: 'PORTRAIT_UP'}],
       ].filter(Boolean),
       extra: {
         eas: {
