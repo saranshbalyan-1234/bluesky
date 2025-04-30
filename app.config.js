@@ -195,7 +195,7 @@ module.exports = function (_config) {
         'expo-localization',
         [
           'react-native-edge-to-edge',
-          { android: { enforceNavigationBarContrast: false } },
+          {android: {enforceNavigationBarContrast: false}},
         ],
         USE_SENTRY && [
           '@sentry/react-native/expo',
@@ -356,7 +356,7 @@ module.exports = function (_config) {
             },
           },
         ],
-        ['expo-screen-orientation', { initialOrientation: 'PORTRAIT_UP' }],
+        ['expo-screen-orientation', {initialOrientation: 'PORTRAIT_UP'}],
       ].filter(Boolean),
       extra: {
         eas: {
