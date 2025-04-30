@@ -1,8 +1,6 @@
 const pkg = require('./package.json')
 
-const DARK_SPLASH_ANDROID_BACKGROUND = '#0f141b'
-
-module.exports = function (config) {
+module.exports = function (_config) {
   /**
    * App version number. Should be incremented as part of a release cycle.
    */
@@ -31,14 +29,11 @@ module.exports = function (config) {
   const UPDATES_CHANNEL = IS_TESTFLIGHT
     ? 'testflight'
     : IS_PRODUCTION
-    ? 'production'
-    : undefined
+      ? 'production'
+      : undefined
   const UPDATES_ENABLED = !!UPDATES_CHANNEL
 
   const USE_SENTRY = Boolean(process.env.SENTRY_AUTH_TOKEN)
-  const SENTRY_DIST = `${PLATFORM}.${VERSION}.${IS_TESTFLIGHT ? 'tf' : ''}${
-    IS_DEV ? 'dev' : ''
-  }`
 
   return {
     expo: {
@@ -143,12 +138,10 @@ module.exports = function (config) {
       },
       androidStatusBar: {
         barStyle: 'light-content',
-        backgroundColor: '#00000000',
       },
       // Dark nav bar in light mode is better than light nav bar in dark mode
       androidNavigationBar: {
         barStyle: 'light-content',
-        backgroundColor: DARK_SPLASH_ANDROID_BACKGROUND,
       },
       android: {
         icon: './assets/app-icons/android_icon_default_light.png',
@@ -190,9 +183,9 @@ module.exports = function (config) {
           : undefined,
         codeSigningMetadata: UPDATES_ENABLED
           ? {
-              keyid: 'main',
-              alg: 'rsa-v1_5-sha256',
-            }
+            keyid: 'main',
+            alg: 'rsa-v1_5-sha256',
+          }
           : undefined,
         checkAutomatically: 'NEVER',
         channel: UPDATES_CHANNEL,
@@ -200,13 +193,16 @@ module.exports = function (config) {
       plugins: [
         'expo-video',
         'expo-localization',
+        [
+          'react-native-edge-to-edge',
+          { android: { enforceNavigationBarContrast: false } },
+        ],
         USE_SENTRY && [
           '@sentry/react-native/expo',
           {
             organization: 'saranshbalyan123',
             project: 'react-native',
-            release: VERSION,
-            dist: SENTRY_DIST,
+            url: 'https://sentry.io',
           },
         ],
         [
@@ -244,7 +240,7 @@ module.exports = function (config) {
         './plugins/withAndroidManifestPlugin.js',
         './plugins/withAndroidManifestFCMIconPlugin.js',
         './plugins/withAndroidStylesAccentColorPlugin.js',
-        './plugins/withAndroidSplashScreenStatusBarTranslucentPlugin.js',
+        './plugins/withAndroidDayNightThemePlugin.js',
         './plugins/withAndroidNoJitpackPlugin.js',
         './plugins/withNoBundleCompression.js',
         './plugins/shareExtension/withShareExtensions.js',
@@ -360,17 +356,7 @@ module.exports = function (config) {
             },
           },
         ],
-        ['expo-screen-orientation', {initialOrientation: 'PORTRAIT_UP'}],
-        [
-          'react-native-vision-camera',
-          {
-            enableLocation: false,
-            cameraPermissionText: 'Bluesky needs access to your camera.',
-            enableMicrophonePermission: true,
-            microphonePermissionText:
-              'Bluesky needs access to your microphone.',
-          },
-        ],
+        ['expo-screen-orientation', { initialOrientation: 'PORTRAIT_UP' }],
       ].filter(Boolean),
       extra: {
         eas: {
@@ -406,22 +392,6 @@ module.exports = function (config) {
           },
           projectId: 'c336c77c-6aec-4c09-9177-c52aa4a4c909',
         },
-      },
-      hooks: {
-        postPublish: [
-          /*
-           * @see https://docs.expo.dev/guides/using-sentry/#app-configuration
-           */
-          {
-            file: './postHooks/uploadSentrySourcemapsPostHook',
-            config: {
-              organization: 'blueskyweb',
-              project: 'react-native',
-              release: VERSION,
-              dist: SENTRY_DIST,
-            },
-          },
-        ],
       },
     },
   }
