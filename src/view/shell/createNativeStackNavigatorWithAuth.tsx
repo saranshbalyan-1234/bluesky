@@ -36,7 +36,7 @@ import {
 import {LoggedOut} from '#/view/com/auth/LoggedOut'
 import {Onboarding} from '#/screens/Onboarding'
 import {SignupQueued} from '#/screens/SignupQueued'
-import {atoms as a, useLayoutBreakpoints, useTheme} from '#/alf'
+import {atoms as a, useLayoutBreakpoints, useTheme, web} from '#/alf'
 import {PolicyUpdateOverlay} from '#/components/PolicyUpdateOverlay'
 import {BottomBarWeb} from './bottom-bar/BottomBarWeb'
 import {DesktopLeftNav} from './desktop/LeftNav'
@@ -155,7 +155,7 @@ function NativeStackNavigator({
             <View style={[a.h_full, a.border_l, t.atoms.border_contrast_low]} />
           </>
         )}
-        <View style={[a.flex_1, a.overflow_auto]}>
+        <View style={[a.flex_1, web(a.overflow_auto)]}>
           <NativeStackView
             {...rest}
             state={state}
