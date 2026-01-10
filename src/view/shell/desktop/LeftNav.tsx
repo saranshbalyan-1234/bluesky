@@ -70,7 +70,7 @@ import {
   UserCircle_Filled_Corner0_Rounded as UserCircleFilled,
   UserCircle_Stroke2_Corner0_Rounded as UserCircle,
 } from '#/components/icons/UserCircle'
-import {CENTER_COLUMN_OFFSET} from '#/components/Layout'
+// import {CENTER_COLUMN_OFFSET} from '#/components/Layout'
 import * as Menu from '#/components/Menu'
 import * as Prompt from '#/components/Prompt'
 import {Text} from '#/components/Typography'
@@ -104,7 +104,7 @@ function ProfileCard() {
   const {isActive: live} = useActorStatus(profile)
 
   return (
-    <View style={[a.my_md, !leftNavMinimal && [a.w_full, a.align_start]]}>
+    <View style={[a.my_md,a.mt_5xl, !leftNavMinimal && [a.w_full, a.align_start]]}>
       {!isLoading && profile ? (
         <Menu.Root>
           <Menu.Trigger label={_(msg`Switch accounts`)}>
@@ -615,7 +615,7 @@ export function DesktopLeftNav() {
   const pal = usePalette('default')
   const {_} = useLingui()
   const {isDesktop} = useWebMediaQueries()
-  const {leftNavMinimal, centerColumnOffset} = useLayoutBreakpoints()
+  const {leftNavMinimal, centerColumnOffset:_centerColumnOffset} = useLayoutBreakpoints()
   const numUnreadNotifications = useUnreadNotifications()
   const hasHomeBadge = useHomeBadge()
   const gate = useGate()
@@ -630,17 +630,7 @@ export function DesktopLeftNav() {
       style={[
         a.px_xl,
         styles.leftNav,
-        leftNavMinimal && styles.leftNavMinimal,
-        {
-          transform: [
-            {
-              translateX:
-                -300 + (centerColumnOffset ? CENTER_COLUMN_OFFSET : 0),
-            },
-            {translateX: '-100%'},
-            ...a.scrollbar_offset.transform,
-          ],
-        },
+        leftNavMinimal && styles.leftNavMinimal
       ]}>
       {hasSession ? (
         <ProfileCard />
@@ -814,15 +804,16 @@ export function DesktopLeftNav() {
 
 const styles = StyleSheet.create({
   leftNav: {
-    ...a.fixed,
-    top: 0,
+    // ...a.fixed,
+    // top: 0,
     paddingTop: 10,
     paddingBottom: 10,
-    left: '50%',
+    // left: '50%',
     width: 240,
     // @ts-expect-error web only
     maxHeight: '100vh',
     overflowY: 'auto',
+    zIndex:1000
   },
   leftNavMinimal: {
     paddingTop: 0,

@@ -25,9 +25,8 @@ import {
   type NativeStackNavigatorProps,
 } from '@react-navigation/native-stack'
 
-import {PWI_ENABLED} from '#/lib/build-flags'
 import {useWebMediaQueries} from '#/lib/hooks/useWebMediaQueries'
-import {isNative, isWeb} from '#/platform/detection'
+import {isWeb} from '#/platform/detection'
 import {useSession} from '#/state/session'
 import {useOnboardingState} from '#/state/shell'
 import {
@@ -41,7 +40,6 @@ import {atoms as a, useLayoutBreakpoints} from '#/alf'
 import {PolicyUpdateOverlay} from '#/components/PolicyUpdateOverlay'
 import {BottomBarWeb} from './bottom-bar/BottomBarWeb'
 import {DesktopLeftNav} from './desktop/LeftNav'
-import {DesktopRightNav} from './desktop/RightNav'
 
 type NativeStackNavigationOptionsWithAuth = NativeStackNavigationOptions & {
   requireAuth?: boolean
@@ -107,15 +105,15 @@ function NativeStackNavigator({
 
   // --- our custom logic starts here ---
   const {hasSession, currentAccount} = useSession()
-  const activeRoute = state.routes[state.index]
-  const activeDescriptor = descriptors[activeRoute.key]
-  const activeRouteRequiresAuth = activeDescriptor.options.requireAuth ?? false
+  // const activeRoute = state.routes[state.index]
+  // const activeDescriptor = descriptors[activeRoute.key]
+  // const activeRouteRequiresAuth = activeDescriptor.options.requireAuth ?? false
   const onboardingState = useOnboardingState()
   const {showLoggedOut} = useLoggedOutView()
   const {setShowLoggedOut} = useLoggedOutViewControls()
   const {isMobile} = useWebMediaQueries()
   const {leftNavMinimal} = useLayoutBreakpoints()
-  if (!hasSession && (!PWI_ENABLED || activeRouteRequiresAuth || isNative)) {
+  if (!hasSession) {
     return <LoggedOut />
   }
   if (hasSession && currentAccount?.signupQueued) {
@@ -149,21 +147,19 @@ function NativeStackNavigator({
 
   return (
     <NavigationContent>
-      <View role="main" style={a.flex_1}>
-        <NativeStackView
-          {...rest}
-          state={state}
-          navigation={navigation}
-          descriptors={descriptors}
-          describe={describe}
-        />
+      <View style={[a.flex_row, a.flex_1]}>
+        {isWeb && !showBottomBar && <DesktopLeftNav />}
+        <View role="main" style={[a.flex_1]}>
+          <NativeStackView
+            {...rest}
+            state={state}
+            navigation={navigation}
+            descriptors={descriptors}
+            describe={describe}
+          />
+        </View>
       </View>
-      {isWeb && (
-        <>
-          {showBottomBar ? <BottomBarWeb /> : <DesktopLeftNav />}
-          {!isMobile && <DesktopRightNav routeName={activeRoute.name} />}
-        </>
-      )}
+      {isWeb && showBottomBar && <BottomBarWeb />}
 
       {/* Only shown after logged in and onboaring etc are complete */}
       {hasSession && <PolicyUpdateOverlay />}

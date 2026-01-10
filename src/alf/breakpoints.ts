@@ -7,8 +7,8 @@ export function useBreakpoints(): Record<Breakpoint, boolean> & {
   activeBreakpoint: Breakpoint | undefined
 } {
   const gtPhone = useMediaQuery({minWidth: 500})
-  const gtMobile = useMediaQuery({minWidth: 800})
-  const gtTablet = useMediaQuery({minWidth: 1300})
+  const gtTablet = useMediaQuery({ minWidth: 1300 })
+  const gtMobile = gtTablet;
   return useMemo(() => {
     let active: Breakpoint | undefined
     if (gtTablet) {

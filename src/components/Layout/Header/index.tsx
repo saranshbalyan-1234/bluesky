@@ -63,7 +63,7 @@ export function Outer({
           web: [a.py_xs, {minHeight: 52}],
         }),
         t.atoms.border_contrast_low,
-        gtMobile && [a.mx_auto, {maxWidth: 600}],
+        gtMobile && [a.mx_auto],
         !isWithinOffsetView && {
           transform: [
             {translateX: centerColumnOffset ? CENTER_COLUMN_OFFSET : 0},

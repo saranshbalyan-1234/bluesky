@@ -95,7 +95,7 @@ function scan(node = document) {
     iframe.scrolling = 'no'
 
     const container = document.createElement('div')
-    container.style.maxWidth = '600px'
+    // container.style.maxWidth = '600px'
     container.style.width = '100%'
     container.style.marginTop = '10px'
     container.style.marginBottom = '10px'

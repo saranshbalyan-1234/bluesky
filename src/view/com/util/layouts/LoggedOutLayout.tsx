@@ -140,6 +140,5 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   contentWrapper: {
-    maxWidth: 600,
   },
 })

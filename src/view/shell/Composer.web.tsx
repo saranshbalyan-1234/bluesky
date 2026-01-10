@@ -122,7 +122,6 @@ function Inner({state}: {state: ComposerOpts}) {
 const styles = StyleSheet.create({
   container: {
     marginTop: 50,
-    maxWidth: 600,
     width: '100%',
     paddingVertical: 0,
     borderRadius: 8,
