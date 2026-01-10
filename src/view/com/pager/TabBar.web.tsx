@@ -147,7 +147,7 @@ export function TabBar({
 const desktopStyles = StyleSheet.create({
   outer: {
     flexDirection: 'row',
-    width: 600,
+    // width: 600,
   },
   contentContainer: {
     flexGrow: 1,

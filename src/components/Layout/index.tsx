@@ -16,12 +16,12 @@ import {useShellLayout} from '#/state/shell/shell-layout'
 import {
   atoms as a,
   useBreakpoints,
-  useLayoutBreakpoints,
+  // useLayoutBreakpoints,
   useTheme,
   web,
 } from '#/alf'
-import {useDialogContext} from '#/components/Dialog'
-import {CENTER_COLUMN_OFFSET, SCROLLBAR_OFFSET} from '#/components/Layout/const'
+// import {useDialogContext} from '#/components/Dialog'
+import {SCROLLBAR_OFFSET} from '#/components/Layout/const'
 import {ScrollbarOffsetContext} from '#/components/Layout/context'
 
 export * from '#/components/Layout/const'
@@ -156,13 +156,12 @@ export const KeyboardAwareContent = memo(function LayoutKeyboardAwareContent({
 export const Center = memo(function LayoutCenter({
   children,
   style,
-  ignoreTabletLayoutOffset,
+  // ignoreTabletLayoutOffset,
   ...props
-}: ViewProps & {ignoreTabletLayoutOffset?: boolean}) {
+}: ViewProps) {
   const {isWithinOffsetView} = useContext(ScrollbarOffsetContext)
   const {gtMobile} = useBreakpoints()
-  const {centerColumnOffset} = useLayoutBreakpoints()
-  const {isWithinDialog} = useDialogContext()
+  // const {isWithinDialog} = useDialogContext()
   const ctx = useMemo(() => ({isWithinOffsetView: true}), [])
   return (
     <View
@@ -170,18 +169,10 @@ export const Center = memo(function LayoutCenter({
         a.w_full,
         a.mx_auto,
         gtMobile && {
-          maxWidth: 600,
+          // maxWidth: 900,
         },
         !isWithinOffsetView && {
           transform: [
-            {
-              translateX:
-                centerColumnOffset &&
-                !ignoreTabletLayoutOffset &&
-                !isWithinDialog
-                  ? CENTER_COLUMN_OFFSET
-                  : 0,
-            },
             {translateX: web(SCROLLBAR_OFFSET) ?? 0},
           ],
         },
@@ -201,21 +192,19 @@ export const Center = memo(function LayoutCenter({
 const WebCenterBorders = memo(function LayoutWebCenterBorders() {
   const t = useTheme()
   const {gtMobile} = useBreakpoints()
-  const {centerColumnOffset} = useLayoutBreakpoints()
   return gtMobile ? (
     <View
       style={[
         a.fixed,
         a.inset_0,
-        a.border_l,
-        a.border_r,
+        // a.border_l,
+        // a.border_r,
         t.atoms.border_contrast_low,
         web({
-          width: 602,
+          // width: 902,
           left: '50%',
           transform: [
             {translateX: '-50%'},
-            {translateX: centerColumnOffset ? CENTER_COLUMN_OFFSET : 0},
             ...a.scrollbar_offset.transform,
           ],
         }),

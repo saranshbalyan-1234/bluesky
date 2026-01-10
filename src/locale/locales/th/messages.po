@@ -94,12 +94,12 @@ msgstr ""
 msgid "{0, plural, one {#mo} other {#mo}}"
 msgstr ""
 
-#: src/components/ProfileHoverCard/index.web.tsx:444
+#: src/components/ProfileHoverCard/index.web.tsx:445
 #: src/screens/Profile/Header/Metrics.tsx:22
 msgid "{0, plural, one {follower} other {followers}}"
 msgstr ""
 
-#: src/components/ProfileHoverCard/index.web.tsx:448
+#: src/components/ProfileHoverCard/index.web.tsx:449
 #: src/screens/Profile/Header/Metrics.tsx:26
 msgid "{0, plural, one {following} other {following}}"
 msgstr ""
@@ -160,7 +160,7 @@ msgstr ""
 msgid "{0} following"
 msgstr ""
 
-#: src/components/live/LiveStatusDialog.tsx:68
+#: src/components/live/LiveStatusDialog.tsx:79
 msgid "{0} is live"
 msgstr ""
 
@@ -411,7 +411,7 @@ msgstr ""
 msgid "{firstAuthorName} verified you"
 msgstr ""
 
-#: src/components/ProfileHoverCard/index.web.tsx:577
+#: src/components/ProfileHoverCard/index.web.tsx:578
 msgid "{following} following"
 msgstr "{following} ติดตามอยู่"
 
@@ -628,18 +628,18 @@ msgstr "บัญชี"
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:393
 #: src/screens/Messages/components/RequestButtons.tsx:91
-#: src/view/com/profile/ProfileMenu.tsx:166
+#: src/view/com/profile/ProfileMenu.tsx:169
 msgctxt "toast"
 msgid "Account blocked"
 msgstr "บัญชีถูกบล็อก"
 
-#: src/view/com/profile/ProfileMenu.tsx:179
+#: src/view/com/profile/ProfileMenu.tsx:182
 msgctxt "toast"
 msgid "Account followed"
 msgstr "ติดตามบัญชีแล้ว"
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:416
-#: src/view/com/profile/ProfileMenu.tsx:142
+#: src/view/com/profile/ProfileMenu.tsx:145
 msgctxt "toast"
 msgid "Account muted"
 msgstr "ปิดเสียงบัญชีแล้ว"
@@ -667,18 +667,18 @@ msgstr "ลบบัญชีออกจากการเข้าถึงด
 
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:84
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:290
-#: src/view/com/profile/ProfileMenu.tsx:156
+#: src/view/com/profile/ProfileMenu.tsx:159
 msgctxt "toast"
 msgid "Account unblocked"
 msgstr "ปลดบล็อกบัญชีแล้ว"
 
-#: src/view/com/profile/ProfileMenu.tsx:191
+#: src/view/com/profile/ProfileMenu.tsx:194
 msgctxt "toast"
 msgid "Account unfollowed"
 msgstr "เลิกติดตามบัญชีแล้ว"
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:406
-#: src/view/com/profile/ProfileMenu.tsx:132
+#: src/view/com/profile/ProfileMenu.tsx:135
 msgctxt "toast"
 msgid "Account unmuted"
 msgstr "เลิกปิดเสียงบัญชีแล้ว"
@@ -784,8 +784,8 @@ msgstr ""
 msgid "Add media to post"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:506
-#: src/components/moderation/ReportDialog/index.tsx:510
+#: src/components/moderation/ReportDialog/index.tsx:520
+#: src/components/moderation/ReportDialog/index.tsx:524
 msgid "Add more details (optional)"
 msgstr ""
 
@@ -830,8 +830,8 @@ msgstr ""
 msgid "Add this feed to your feeds"
 msgstr "เพิ่มฟีตนี้ในฟีตของคุณ"
 
-#: src/view/com/profile/ProfileMenu.tsx:322
-#: src/view/com/profile/ProfileMenu.tsx:325
+#: src/view/com/profile/ProfileMenu.tsx:323
+#: src/view/com/profile/ProfileMenu.tsx:326
 msgid "Add to lists"
 msgstr "เพิ่มในลิสต์"
 
@@ -840,8 +840,8 @@ msgid "Add to saved posts"
 msgstr ""
 
 #: src/components/dialogs/StarterPackDialog.tsx:176
-#: src/view/com/profile/ProfileMenu.tsx:313
-#: src/view/com/profile/ProfileMenu.tsx:316
+#: src/view/com/profile/ProfileMenu.tsx:314
+#: src/view/com/profile/ProfileMenu.tsx:317
 msgid "Add to starter packs"
 msgstr ""
 
@@ -849,7 +849,7 @@ msgstr ""
 msgid "Add user to list"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:222
+#: src/ageAssurance/components/NoAccessScreen.tsx:231
 msgid "Add your birthdate"
 msgstr ""
 
@@ -866,7 +866,7 @@ msgstr ""
 msgid "Additional details (limit 1000 characters)"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:524
+#: src/components/moderation/ReportDialog/index.tsx:538
 msgid "Additional details (limit 300 characters)"
 msgstr ""
 
@@ -919,8 +919,8 @@ msgctxt "toast"
 msgid "Age assurance inquiry was submitted"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:345
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:191
+#: src/ageAssurance/components/NoAccessScreen.tsx:354
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:199
 msgid "Age assurance only takes a few minutes"
 msgstr ""
 
@@ -1257,6 +1257,11 @@ msgstr "อุทธรณ์"
 msgid "Appeal \"{0}\" label"
 msgstr "อุทธรณ์ป้าย \"{0}\""
 
+#: src/components/live/GoLiveDisabledDialog.tsx:92
+msgid "Appeal livestream suspension"
+msgstr ""
+
+#: src/components/live/GoLiveDisabledDialog.tsx:82
 #: src/components/moderation/LabelsOnMeDialog.tsx:271
 #: src/screens/Messages/components/ChatDisabled.tsx:103
 msgctxt "toast"
@@ -1467,7 +1472,7 @@ msgstr "วันเกิด"
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:792
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:190
-#: src/view/com/profile/ProfileMenu.tsx:495
+#: src/view/com/profile/ProfileMenu.tsx:504
 msgid "Block"
 msgstr "บล็อก"
 
@@ -1477,13 +1482,13 @@ msgstr "บล็อก"
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:679
 #: src/screens/Messages/components/RequestButtons.tsx:144
 #: src/screens/Messages/components/RequestButtons.tsx:146
-#: src/view/com/profile/ProfileMenu.tsx:401
-#: src/view/com/profile/ProfileMenu.tsx:408
+#: src/view/com/profile/ProfileMenu.tsx:410
+#: src/view/com/profile/ProfileMenu.tsx:417
 msgid "Block account"
 msgstr "บล็อกบัญชี"
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:787
-#: src/view/com/profile/ProfileMenu.tsx:478
+#: src/view/com/profile/ProfileMenu.tsx:487
 msgid "Block Account?"
 msgstr "บล็อกบัญชี?"
 
@@ -1535,7 +1540,7 @@ msgid "Blocked Accounts"
 msgstr "บัญชีที่ถูกบล็อก"
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:789
-#: src/view/com/profile/ProfileMenu.tsx:490
+#: src/view/com/profile/ProfileMenu.tsx:499
 msgid "Blocked accounts cannot reply in your threads, mention you, or otherwise interact with you."
 msgstr "บัญชีที่ถูกบล็อกไม่สามารถตอบในกระทู้ของคุณ, กล่าวถึงคุณ, หรือมีปฏิสัมพันธ์กับคุณได้"
 
@@ -1551,7 +1556,7 @@ msgstr "การบล็อกไม่ได้ป้องกันผู้
 msgid "Blocking is public. Blocked accounts cannot reply in your threads, mention you, or otherwise interact with you."
 msgstr "การบล็อกเป็นสาธารณะ บัญชีที่ถูกบล็อกไม่สามารถตอบในกระทู้ของคุณ, กล่าวถึงคุณ, หรือมีปฏิสัมพันธ์กับคุณได้"
 
-#: src/view/com/profile/ProfileMenu.tsx:487
+#: src/view/com/profile/ProfileMenu.tsx:496
 msgid "Blocking will not prevent labels from being applied on your account, but it will stop this account from replying in your threads or interacting with you."
 msgstr "การบล็อกจะไม่ป้องกันไม่ให้ป้ายถูกวางบนบัญชีของคุณ แต่จะหยุดบัญชีนี้จากการตอบในกระทู้ของคุณหรือมีปฏิสัมพันธ์กับคุณ"
 
@@ -1585,8 +1590,7 @@ msgstr "Bluesky เป็นเครือข่ายเปิดที่ค�
 msgid "Bluesky is an open network where you can choose your own provider. If you're new here, we recommend sticking with the default Bluesky Social option."
 msgstr ""
 
-#: src/components/ProgressGuide/List.tsx:53
-#: src/components/ProgressGuide/List.tsx:70
+#: src/components/ProgressGuide/List.tsx:103
 msgid "Bluesky is better with friends!"
 msgstr "Bluesky สนุกยิ่งขึ้นเมื่อมีเพื่อน!"
 
@@ -1673,15 +1677,15 @@ msgstr "เรียกดูข้อเสนอเพิ่มเติมใ
 msgid "Browse other feeds"
 msgstr "เรียกดูฟีดอื่น ๆ"
 
-#: src/components/TrendingTopics.tsx:178
+#: src/components/TrendingTopics.tsx:179
 msgid "Browse posts about {displayName}"
 msgstr ""
 
-#: src/components/TrendingTopics.tsx:186
+#: src/components/TrendingTopics.tsx:187
 msgid "Browse posts tagged with {displayName}"
 msgstr ""
 
-#: src/components/TrendingTopics.tsx:195
+#: src/components/TrendingTopics.tsx:196
 msgid "Browse starter pack {displayName}"
 msgstr ""
 
@@ -1689,7 +1693,7 @@ msgstr ""
 msgid "Browse topic {0}"
 msgstr ""
 
-#: src/components/TrendingTopics.tsx:232
+#: src/components/TrendingTopics.tsx:233
 msgid "Browse topic {displayName}"
 msgstr ""
 
@@ -1702,7 +1706,7 @@ msgid "Button to go back to the home timeline"
 msgstr ""
 
 #: src/components/LabelingServiceCard/index.tsx:62
-#: src/components/moderation/ReportDialog/index.tsx:833
+#: src/components/moderation/ReportDialog/index.tsx:842
 #: src/screens/Search/components/StarterPackCard.tsx:106
 #: src/screens/Search/Explore.tsx:936
 msgid "By {0}"
@@ -1720,15 +1724,15 @@ msgstr ""
 msgid "By continuing, you consent to this use. You may change your mind any time by visiting settings. <0>Learn more</0>"
 msgstr ""
 
-#: src/screens/Signup/StepInfo/Policies.tsx:79
+#: src/screens/Signup/StepInfo/Policies.tsx:75
 msgid "By creating an account you agree to the <0>Privacy Policy</0>."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/Policies.tsx:46
+#: src/screens/Signup/StepInfo/Policies.tsx:42
 msgid "By creating an account you agree to the <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/Policies.tsx:66
+#: src/screens/Signup/StepInfo/Policies.tsx:62
 msgid "By creating an account you agree to the <0>Terms of Service</0>."
 msgstr ""
 
@@ -1842,7 +1846,7 @@ msgstr ""
 msgid "Change Handle"
 msgstr "เปลี่ยนแฮนด์เดิล"
 
-#: src/components/moderation/ReportDialog/index.tsx:423
+#: src/components/moderation/ReportDialog/index.tsx:437
 msgid "Change moderation service"
 msgstr ""
 
@@ -1855,11 +1859,11 @@ msgstr ""
 msgid "Change password dialog"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:288
+#: src/components/moderation/ReportDialog/index.tsx:302
 msgid "Change report category"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:368
+#: src/components/moderation/ReportDialog/index.tsx:382
 msgid "Change report reason"
 msgstr ""
 
@@ -1998,7 +2002,7 @@ msgstr ""
 msgid "Choose your own timeline! Feeds built by the community help you find content you love."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/index.tsx:244
+#: src/screens/Signup/StepInfo/index.tsx:273
 msgid "Choose your password"
 msgstr "ป้อนรหัสผ่านของคุณ"
 
@@ -2035,7 +2039,7 @@ msgstr "คลิกที่นี่"
 msgid "Click here to contact our support team"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:236
+#: src/ageAssurance/components/NoAccessScreen.tsx:245
 msgid "Click here to log out"
 msgstr ""
 
@@ -2044,7 +2048,7 @@ msgid "Click here to restart the verification process."
 msgstr ""
 
 #: src/ageAssurance/components/NoAccessScreen.tsx:103
-#: src/ageAssurance/components/NoAccessScreen.tsx:219
+#: src/ageAssurance/components/NoAccessScreen.tsx:228
 msgid "Click here to update your birthdate"
 msgstr ""
 
@@ -2091,7 +2095,7 @@ msgstr ""
 #: src/components/NewskieDialog.tsx:167
 #: src/components/NewskieDialog.tsx:173
 #: src/components/Post/Embed/ExternalEmbed/Gif.tsx:208
-#: src/components/ProgressGuide/FollowDialog.tsx:440
+#: src/components/ProgressGuide/FollowDialog.tsx:445
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:118
 #: src/components/StarterPack/Wizard/WizardEditListDialog.tsx:124
 #: src/components/verification/VerificationsDialog.tsx:144
@@ -2107,7 +2111,7 @@ msgid "Close"
 msgstr "ปิด"
 
 #: src/components/Dialog/index.web.tsx:118
-#: src/components/Dialog/index.web.tsx:296
+#: src/components/Dialog/index.web.tsx:295
 msgid "Close active dialog"
 msgstr "ปิดกล่องโต้ตอบที่เปิดอยู่"
 
@@ -2130,7 +2134,7 @@ msgstr "ปิดลิ้นชักด้านล่าง"
 msgid "Close dialog"
 msgstr "ปิดกล่องโต้ตอบ"
 
-#: src/view/shell/index.web.tsx:128
+#: src/view/shell/index.web.tsx:130
 msgid "Close drawer menu"
 msgstr ""
 
@@ -2261,8 +2265,8 @@ msgstr "ยืนยันการตั้งค่าภาษาเนื้
 msgid "Confirm delete account"
 msgstr "ยืนยันการลบบัญชี"
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:359
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:87
+#: src/ageAssurance/components/NoAccessScreen.tsx:368
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:95
 #: src/components/dialogs/DeviceLocationRequestDialog.tsx:40
 #: src/components/dialogs/DeviceLocationRequestDialog.tsx:105
 msgid "Confirm your location"
@@ -2288,8 +2292,8 @@ msgstr "กำลังเชื่อมต่อ..."
 msgid "Connection issue"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:296
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:130
+#: src/ageAssurance/components/NoAccessScreen.tsx:305
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:138
 #: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:29
 msgid "Contact our moderation team"
 msgstr ""
@@ -2444,8 +2448,8 @@ msgstr "คัดลอก"
 msgid "Copy App Password"
 msgstr ""
 
-#: src/view/com/profile/ProfileMenu.tsx:438
-#: src/view/com/profile/ProfileMenu.tsx:441
+#: src/view/com/profile/ProfileMenu.tsx:447
+#: src/view/com/profile/ProfileMenu.tsx:450
 msgid "Copy at:// URI"
 msgstr ""
 
@@ -2460,8 +2464,8 @@ msgid "Copy code"
 msgstr "คัดลอกโค้ด"
 
 #: src/screens/Settings/components/ChangeHandleDialog.tsx:502
-#: src/view/com/profile/ProfileMenu.tsx:447
-#: src/view/com/profile/ProfileMenu.tsx:450
+#: src/view/com/profile/ProfileMenu.tsx:456
+#: src/view/com/profile/ProfileMenu.tsx:459
 msgid "Copy DID"
 msgstr ""
 
@@ -2490,8 +2494,8 @@ msgstr "คัดลอกลิงก์ไปยังลิสต์"
 msgid "Copy link to post"
 msgstr "คัดลอกลิงก์ไปยังโพสต์"
 
-#: src/view/com/profile/ProfileMenu.tsx:251
-#: src/view/com/profile/ProfileMenu.tsx:262
+#: src/view/com/profile/ProfileMenu.tsx:252
+#: src/view/com/profile/ProfileMenu.tsx:263
 msgid "Copy link to profile"
 msgstr ""
 
@@ -2673,8 +2677,8 @@ msgid "Create new account"
 msgstr "สร้างบัญชีใหม่"
 
 #. Accessibility label for button to create a moderation report for the selected option
-#: src/components/moderation/ReportDialog/index.tsx:688
-#: src/components/moderation/ReportDialog/index.tsx:734
+#: src/components/moderation/ReportDialog/index.tsx:702
+#: src/components/moderation/ReportDialog/index.tsx:748
 msgid "Create report for {0}"
 msgstr "สร้างรายงานสำหรับ {0}"
 
@@ -2740,7 +2744,7 @@ msgstr "โหมดมืด"
 msgid "Dark theme"
 msgstr "ธีมมืด"
 
-#: src/screens/Signup/StepInfo/index.tsx:272
+#: src/screens/Signup/StepInfo/index.tsx:301
 msgid "Date of birth"
 msgstr "วันเกิด"
 
@@ -3015,7 +3019,7 @@ msgstr ""
 msgid "Dismiss error"
 msgstr "ปิดข้อผิดพลาด"
 
-#: src/components/ProgressGuide/List.tsx:42
+#: src/components/ProgressGuide/List.tsx:67
 msgid "Dismiss getting started guide"
 msgstr "ปิดคู่มือเริ่มต้นใช้งาน"
 
@@ -3070,8 +3074,8 @@ msgstr ""
 msgid "Don't see an email? <0>Click here to resend.</0>"
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceDismissibleFeedBanner.tsx:103
-#: src/components/ageAssurance/AgeAssuranceDismissibleNotice.tsx:33
+#: src/components/ageAssurance/AgeAssuranceDismissibleFeedBanner.tsx:104
+#: src/components/ageAssurance/AgeAssuranceDismissibleNotice.tsx:37
 msgid "Don't show again"
 msgstr ""
 
@@ -3230,8 +3234,8 @@ msgstr ""
 msgid "Edit list details"
 msgstr "แก้ไขรายละเอียดลิสต์"
 
-#: src/view/com/profile/ProfileMenu.tsx:334
-#: src/view/com/profile/ProfileMenu.tsx:340
+#: src/view/com/profile/ProfileMenu.tsx:337
+#: src/view/com/profile/ProfileMenu.tsx:349
 msgid "Edit live status"
 msgstr ""
 
@@ -3294,7 +3298,7 @@ msgid "Either the creator of this list has blocked you or you have blocked the c
 msgstr ""
 
 #: src/screens/Settings/AccountSettings.tsx:66
-#: src/screens/Signup/StepInfo/index.tsx:196
+#: src/screens/Signup/StepInfo/index.tsx:225
 msgid "Email"
 msgstr "อีเมล"
 
@@ -3463,7 +3467,7 @@ msgid "Enter your birthdate"
 msgstr ""
 
 #: src/screens/Login/ForgotPasswordForm.tsx:99
-#: src/screens/Signup/StepInfo/index.tsx:216
+#: src/screens/Signup/StepInfo/index.tsx:245
 msgid "Enter your email address"
 msgstr "ใส่อีเมลของคุณ"
 
@@ -3612,7 +3616,7 @@ msgstr "ภาพเปลือยชัดเจน"
 
 #: src/Navigation.tsx:788
 #: src/screens/Search/Shell.tsx:327
-#: src/view/shell/desktop/LeftNav.tsx:690
+#: src/view/shell/desktop/LeftNav.tsx:680
 #: src/view/shell/Drawer.tsx:414
 msgid "Explore"
 msgstr ""
@@ -3826,6 +3830,7 @@ msgstr "การส่งล้มเหลว"
 msgid "Failed to send email, please try again."
 msgstr ""
 
+#: src/components/live/GoLiveDisabledDialog.tsx:76
 #: src/components/moderation/LabelsOnMeDialog.tsx:265
 #: src/screens/Messages/components/ChatDisabled.tsx:99
 msgid "Failed to submit appeal, please try again."
@@ -3912,8 +3917,6 @@ msgstr "สลับฟีต"
 msgid "Feed unavailable"
 msgstr ""
 
-#: src/view/shell/desktop/RightNav.tsx:105
-#: src/view/shell/desktop/RightNav.tsx:106
 #: src/view/shell/Drawer.tsx:368
 msgid "Feedback"
 msgstr "ข้อเสนอแนะ"
@@ -3930,7 +3933,7 @@ msgstr ""
 #: src/screens/StarterPack/StarterPackScreen.tsx:190
 #: src/view/screens/Feeds.tsx:511
 #: src/view/screens/Profile.tsx:239
-#: src/view/shell/desktop/LeftNav.tsx:728
+#: src/view/shell/desktop/LeftNav.tsx:718
 #: src/view/shell/Drawer.tsx:530
 msgid "Feeds"
 msgstr "ฟีด"
@@ -4015,9 +4018,9 @@ msgid "Find my friends"
 msgstr ""
 
 #. Starter packs suggested to the user for them to follow
-#: src/components/ProgressGuide/FollowDialog.tsx:72
-#: src/components/ProgressGuide/FollowDialog.tsx:82
-#: src/components/ProgressGuide/FollowDialog.tsx:426
+#: src/components/ProgressGuide/FollowDialog.tsx:78
+#: src/components/ProgressGuide/FollowDialog.tsx:86
+#: src/components/ProgressGuide/FollowDialog.tsx:431
 #: src/screens/Onboarding/StepSuggestedStarterpacks/index.tsx:42
 msgid "Find people to follow"
 msgstr ""
@@ -4068,8 +4071,8 @@ msgstr ""
 
 #. User is not following this account, click to follow
 #: src/components/ProfileCard.tsx:559
-#: src/components/ProfileHoverCard/index.web.tsx:496
-#: src/components/ProfileHoverCard/index.web.tsx:507
+#: src/components/ProfileHoverCard/index.web.tsx:497
+#: src/components/ProfileHoverCard/index.web.tsx:508
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:131
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:378
 #: src/screens/VideoFeed/index.tsx:879
@@ -4087,17 +4090,20 @@ msgstr "ติดตาม {0}"
 msgid "Follow {handle}"
 msgstr ""
 
-#: src/components/ProgressGuide/List.tsx:52
 #: src/state/shell/progress-guide.tsx:231
 msgid "Follow 10 accounts"
 msgstr ""
 
-#: src/components/ProgressGuide/List.tsx:69
+#: src/components/ProgressGuide/List.tsx:60
+msgid "Follow 10 people to get started"
+msgstr ""
+
+#: src/components/ProgressGuide/List.tsx:102
 msgid "Follow 7 accounts"
 msgstr "ติดตาม 7 บัญชี"
 
-#: src/view/com/profile/ProfileMenu.tsx:292
-#: src/view/com/profile/ProfileMenu.tsx:303
+#: src/view/com/profile/ProfileMenu.tsx:293
+#: src/view/com/profile/ProfileMenu.tsx:304
 msgid "Follow account"
 msgstr "ติดตามบัญชี"
 
@@ -4162,8 +4168,8 @@ msgstr "ผู้ติดตามที่คุณรู้จัก"
 #. User is following this account, click to unfollow
 #. User is following this account, click to unfollow
 #: src/components/ProfileCard.tsx:546
-#: src/components/ProfileHoverCard/index.web.tsx:495
-#: src/components/ProfileHoverCard/index.web.tsx:506
+#: src/components/ProfileHoverCard/index.web.tsx:496
+#: src/components/ProfileHoverCard/index.web.tsx:507
 #: src/screens/PostThread/components/ThreadItemAnchorFollowButton.tsx:134
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:374
 #: src/screens/VideoFeed/index.tsx:877
@@ -4346,10 +4352,6 @@ msgstr ""
 msgid "Get started"
 msgstr ""
 
-#: src/components/ProgressGuide/List.tsx:35
-msgid "Getting started"
-msgstr "เริ่มต้น"
-
 #: src/components/MediaPreview.tsx:114
 msgid "GIF"
 msgstr ""
@@ -4412,8 +4414,8 @@ msgstr "กลับเข้าสู่หน้าหลัก"
 msgid "Go Home"
 msgstr "กลับเข้าสู่หน้าหลัก"
 
-#: src/view/com/profile/ProfileMenu.tsx:335
-#: src/view/com/profile/ProfileMenu.tsx:342
+#: src/view/com/profile/ProfileMenu.tsx:338
+#: src/view/com/profile/ProfileMenu.tsx:351
 msgid "Go live"
 msgstr ""
 
@@ -4424,6 +4426,11 @@ msgstr ""
 msgid "Go Live"
 msgstr ""
 
+#: src/view/com/profile/ProfileMenu.tsx:335
+#: src/view/com/profile/ProfileMenu.tsx:347
+msgid "Go live (disabled)"
+msgstr ""
+
 #: src/components/live/GoLiveDialog.tsx:171
 msgid "Go live for"
 msgstr ""
@@ -4432,9 +4439,9 @@ msgstr ""
 msgid "Go to {firstAuthorName}'s profile"
 msgstr ""
 
-#: src/components/ageAssurance/AgeAssuranceAdmonition.tsx:87
-#: src/components/ageAssurance/AgeRestrictedScreen.tsx:64
-#: src/components/ageAssurance/AgeRestrictedScreen.tsx:73
+#: src/components/ageAssurance/AgeAssuranceAdmonition.tsx:91
+#: src/components/ageAssurance/AgeRestrictedScreen.tsx:71
+#: src/components/ageAssurance/AgeRestrictedScreen.tsx:80
 #: src/screens/Moderation/index.tsx:219
 msgid "Go to account settings"
 msgstr ""
@@ -4460,6 +4467,10 @@ msgstr "ไปที่หน้าโปรไฟล์"
 #: src/components/dms/ConvoMenu.tsx:238
 msgid "Go to user's profile"
 msgstr "ไปที่หน้าโปรไฟล์ผู้ใช้"
+
+#: src/components/live/GoLiveDisabledDialog.tsx:104
+msgid "Going live is currently disabled for your account"
+msgstr ""
 
 #: src/lib/moderation/useGlobalLabelStrings.ts:46
 #: src/lib/moderation/useGlobalLabelStrings.ts:50
@@ -4536,6 +4547,10 @@ msgstr ""
 msgid "Have a code? <0>Click here.</0>"
 msgstr ""
 
+#: src/screens/Signup/StepInfo/index.tsx:332
+msgid "Have we got your location wrong? <0>Tap here to confirm your location with GPS.</0>"
+msgstr ""
+
 #: src/screens/Signup/index.tsx:220
 msgid "Having trouble?"
 msgstr "มีปัญหาใช่ไหม?"
@@ -4546,8 +4561,6 @@ msgstr ""
 
 #: src/screens/Settings/Settings.tsx:254
 #: src/screens/Settings/Settings.tsx:258
-#: src/view/shell/desktop/RightNav.tsx:123
-#: src/view/shell/desktop/RightNav.tsx:124
 #: src/view/shell/Drawer.tsx:381
 msgid "Help"
 msgstr "การช่วยเหลือ"
@@ -4569,7 +4582,7 @@ msgstr ""
 msgid "Hey there!"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:201
+#: src/ageAssurance/components/NoAccessScreen.tsx:210
 msgid "Hi there!"
 msgstr ""
 
@@ -4586,7 +4599,7 @@ msgstr ""
 msgid "Hidden list"
 msgstr "ลิสต์ที่ซ่อนไว้"
 
-#: src/components/interstitials/Trending.tsx:131
+#: src/components/interstitials/Trending.tsx:130
 #: src/components/interstitials/TrendingVideos.tsx:138
 #: src/components/moderation/ContentHider.tsx:208
 #: src/components/moderation/LabelPreference.tsx:140
@@ -4596,7 +4609,7 @@ msgstr "ลิสต์ที่ซ่อนไว้"
 #: src/lib/moderation/useLabelBehaviorDescription.ts:23
 #: src/lib/moderation/useLabelBehaviorDescription.ts:28
 #: src/lib/moderation/useLabelBehaviorDescription.ts:33
-#: src/view/shell/desktop/SidebarTrendingTopics.tsx:111
+#: src/view/shell/desktop/SidebarTrendingTopics.tsx:129
 msgid "Hide"
 msgstr "ซ่อน"
 
@@ -4641,13 +4654,12 @@ msgstr "ซ่อนโพสต์นี้ใช่ไหม?"
 msgid "Hide this reply?"
 msgstr "ซ่อนการตอบกลับใช่ไหม"
 
-#: src/components/interstitials/Trending.tsx:113
-#: src/view/shell/desktop/SidebarTrendingTopics.tsx:62
+#: src/components/interstitials/Trending.tsx:112
 msgid "Hide trending topics"
 msgstr ""
 
-#: src/components/interstitials/Trending.tsx:129
-#: src/view/shell/desktop/SidebarTrendingTopics.tsx:109
+#: src/components/interstitials/Trending.tsx:128
+#: src/view/shell/desktop/SidebarTrendingTopics.tsx:127
 msgid "Hide trending topics?"
 msgstr ""
 
@@ -4708,7 +4720,7 @@ msgstr "รอสักครู่! เรากำลังเปิดให�
 #: src/Navigation.tsx:783
 #: src/Navigation.tsx:803
 #: src/view/shell/bottom-bar/BottomBar.tsx:178
-#: src/view/shell/desktop/LeftNav.tsx:672
+#: src/view/shell/desktop/LeftNav.tsx:662
 #: src/view/shell/Drawer.tsx:440
 msgid "Home"
 msgstr "หน้าหลัก"
@@ -4770,7 +4782,7 @@ msgstr ""
 msgid "If alt text is long, toggles alt text expanded state"
 msgstr "หากข้อความแทนภาพยาว จะทำการเปลี่ยนสถานะการขยายข้อความแทนภาพ"
 
-#: src/screens/Signup/StepInfo/Policies.tsx:110
+#: src/screens/Signup/StepInfo/index.tsx:351
 msgid "If you are not yet an adult according to the laws of your country, your parent or legal guardian must read these Terms on your behalf."
 msgstr "หากคุณยังไม่บรรลุนิติภาวะตามกฎหมายของประเทศคุณ ควรให้ผู้ปกครองหรือผู้ดูแลตามกฎหมายรับทราบแทน"
 
@@ -4866,7 +4878,7 @@ msgstr ""
 msgid "Imported on {0}"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:204
+#: src/ageAssurance/components/NoAccessScreen.tsx:213
 msgid "In order to provide an age-appropriate experience, we need to know your birthdate. This is a one-time thing, and your data will be kept private."
 msgstr ""
 
@@ -4966,7 +4978,7 @@ msgstr ""
 msgid "Invalid phone number"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:80
+#: src/components/moderation/ReportDialog/index.tsx:92
 msgid "Invalid report subject"
 msgstr ""
 
@@ -4982,7 +4994,7 @@ msgstr ""
 msgid "Invite {name} to join Bluesky"
 msgstr ""
 
-#: src/screens/Signup/StepInfo/index.tsx:166
+#: src/screens/Signup/StepInfo/index.tsx:195
 msgid "Invite code"
 msgstr "โค้ดคำเชิญ"
 
@@ -5011,8 +5023,8 @@ msgstr "เชิญเพื่อนของคุณเพื่อติด
 msgid "Invites, but personal"
 msgstr "ยืนยันแต่เป็นส่วนตัว"
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:356
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:84
+#: src/ageAssurance/components/NoAccessScreen.tsx:365
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:92
 msgid "Is your location not accurate? <0>Tap here to confirm your location.</0>"
 msgstr ""
 
@@ -5020,7 +5032,7 @@ msgstr ""
 msgid "It looks like some of your contacts have not tried to find you here yet. You can personally invite them by customizing a draft message we will provide."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/index.tsx:292
+#: src/screens/Signup/StepInfo/index.tsx:384
 msgid "It's correct"
 msgstr "ถูกต้อง"
 
@@ -5108,13 +5120,13 @@ msgstr "ภาษา"
 msgid "Larger"
 msgstr "ใหญ่"
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:339
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:185
+#: src/ageAssurance/components/NoAccessScreen.tsx:348
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:193
 msgid "Last initiated {timeAgo} ago"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:337
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:183
+#: src/ageAssurance/components/NoAccessScreen.tsx:346
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:191
 msgid "Last initiated just now"
 msgstr ""
 
@@ -5138,7 +5150,7 @@ msgstr ""
 msgid "Learn More"
 msgstr "เรียนรู้เพิ่มเติม"
 
-#: src/components/ageAssurance/AgeAssuranceDismissibleFeedBanner.tsx:64
+#: src/components/ageAssurance/AgeAssuranceDismissibleFeedBanner.tsx:65
 msgid "Learn more about age assurance"
 msgstr ""
 
@@ -5190,7 +5202,7 @@ msgstr ""
 msgid "Learn more about what is public on Bluesky."
 msgstr "เรียนรู้เพิ่มเติมเกี่ยวกับสิ่งที่เป็นสาธารณะบน Bluesky"
 
-#: src/components/ageAssurance/AgeAssuranceAdmonition.tsx:84
+#: src/components/ageAssurance/AgeAssuranceAdmonition.tsx:88
 msgid "Learn more in your <0>account settings.</0>"
 msgstr ""
 
@@ -5262,7 +5274,7 @@ msgstr ""
 msgid "Like ({0, plural, one {# like} other {# likes}})"
 msgstr ""
 
-#: src/components/ProgressGuide/List.tsx:63
+#: src/components/ProgressGuide/List.tsx:96
 msgid "Like 10 posts"
 msgstr "ชอบ 10 โพสต์"
 
@@ -5416,7 +5428,7 @@ msgstr "ลิสต์เปิดเสียง"
 #: src/view/screens/Lists.tsx:67
 #: src/view/screens/Profile.tsx:233
 #: src/view/screens/Profile.tsx:241
-#: src/view/shell/desktop/LeftNav.tsx:746
+#: src/view/shell/desktop/LeftNav.tsx:736
 #: src/view/shell/Drawer.tsx:545
 msgid "Lists"
 msgstr "ลิสต์"
@@ -5434,8 +5446,8 @@ msgstr ""
 msgid "LIVE"
 msgstr ""
 
-#: src/components/live/LiveStatusDialog.tsx:215
-msgid "Live feature is in beta testing"
+#: src/components/live/LiveStatusDialog.tsx:235
+msgid "Live feature is in beta"
 msgstr ""
 
 #: src/components/live/EditLiveDialog.tsx:148
@@ -5489,11 +5501,6 @@ msgstr ""
 msgid "Logged-out visibility"
 msgstr "การมองเห็นเมื่อออกจากระบบ"
 
-#: src/view/shell/desktop/RightNav.tsx:133
-msgid "Logo by @sawaratsuki.bsky.social"
-msgstr ""
-
-#: src/view/shell/desktop/RightNav.tsx:130
 #: src/view/shell/Drawer.tsx:709
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr ""
@@ -5707,8 +5714,8 @@ msgstr "เครื่องมือการกรอง"
 msgid "Moderator has chosen to set a general warning on the content."
 msgstr "ผู้ดูแลระบบเลือกที่จะตั้งคำเตือนทั่วไปบนเนื้อหา"
 
-#: src/view/shell/desktop/Feeds.tsx:113
-#: src/view/shell/desktop/Feeds.tsx:123
+#: src/view/shell/desktop/Feeds.tsx:107
+#: src/view/shell/desktop/Feeds.tsx:154
 msgid "More feeds"
 msgstr "ฟีตเพิ่มเติม"
 
@@ -5718,8 +5725,8 @@ msgid "More languages..."
 msgstr ""
 
 #: src/screens/ProfileList/components/MoreOptionsMenu.tsx:149
-#: src/view/com/profile/ProfileMenu.tsx:228
-#: src/view/com/profile/ProfileMenu.tsx:234
+#: src/view/com/profile/ProfileMenu.tsx:229
+#: src/view/com/profile/ProfileMenu.tsx:235
 msgid "More options"
 msgstr "การตั้งค่าเพิ่มเติม"
 
@@ -5752,8 +5759,8 @@ msgstr ""
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:660
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:666
-#: src/view/com/profile/ProfileMenu.tsx:380
-#: src/view/com/profile/ProfileMenu.tsx:387
+#: src/view/com/profile/ProfileMenu.tsx:389
+#: src/view/com/profile/ProfileMenu.tsx:396
 msgid "Mute account"
 msgstr "ปิดการมองเห็นการฟีดโพสต์และเรื่องราว"
 
@@ -5873,8 +5880,8 @@ msgstr "ไปยังหน้าถัดไป"
 msgid "Navigates to your profile"
 msgstr "สำรวจโปรไฟล์ของคุฯ"
 
-#: src/components/moderation/ReportDialog/index.tsx:319
-#: src/components/moderation/ReportDialog/index.tsx:336
+#: src/components/moderation/ReportDialog/index.tsx:333
+#: src/components/moderation/ReportDialog/index.tsx:350
 msgid "Need to report a copyright violation, legal request, or regulatory compliance issue?"
 msgstr ""
 
@@ -6138,7 +6145,7 @@ msgid "No result"
 msgstr "ไม่มีผลลัพธ์"
 
 #: src/components/dialogs/SearchablePeopleList.tsx:223
-#: src/components/ProgressGuide/FollowDialog.tsx:224
+#: src/components/ProgressGuide/FollowDialog.tsx:229
 msgid "No results"
 msgstr "ไม่มีผลลัพธ์"
 
@@ -6227,7 +6234,7 @@ msgstr ""
 msgid "Not Found"
 msgstr "ไม่พบ"
 
-#: src/view/com/profile/ProfileMenu.tsx:502
+#: src/view/com/profile/ProfileMenu.tsx:511
 msgid "Note about sharing"
 msgstr "โน้ตเกี่ยวกับการแชร์"
 
@@ -6280,7 +6287,7 @@ msgstr "เสียงการแจ้งเตือน"
 #: src/screens/Settings/Settings.tsx:205
 #: src/view/screens/Notifications.tsx:130
 #: src/view/shell/bottom-bar/BottomBar.tsx:252
-#: src/view/shell/desktop/LeftNav.tsx:709
+#: src/view/shell/desktop/LeftNav.tsx:699
 #: src/view/shell/Drawer.tsx:493
 msgid "Notifications"
 msgstr "การแจ้งเตือน"
@@ -6460,8 +6467,8 @@ msgstr ""
 msgid "Open post options menu"
 msgstr "เปิดเมนูการตั้งค่าโพสต์"
 
-#: src/components/live/LiveStatusDialog.tsx:189
-#: src/components/live/LiveStatusDialog.tsx:203
+#: src/components/live/LiveStatusDialog.tsx:205
+#: src/components/live/LiveStatusDialog.tsx:219
 msgid "Open profile"
 msgstr ""
 
@@ -6481,6 +6488,10 @@ msgstr "เปิดหน้าสตอรี่บุ๊ค"
 #: src/screens/Settings/Settings.tsx:457
 msgid "Open system log"
 msgstr "เปิด system log"
+
+#: src/view/shell/desktop/Feeds.tsx:186
+msgid "Opens {0} feed"
+msgstr ""
 
 #: src/view/com/composer/labels/LabelsBtn.tsx:62
 msgid "Opens a dialog to add a content warning to your post"
@@ -6666,7 +6677,7 @@ msgstr "ไม่พบหน้านี้"
 #: src/screens/Login/LoginForm.tsx:229
 #: src/screens/Settings/AccountSettings.tsx:121
 #: src/screens/Settings/AccountSettings.tsx:125
-#: src/screens/Signup/StepInfo/index.tsx:231
+#: src/screens/Signup/StepInfo/index.tsx:260
 #: src/view/com/modals/DeleteAccount.tsx:239
 #: src/view/com/modals/DeleteAccount.tsx:246
 msgid "Password"
@@ -6847,7 +6858,7 @@ msgid "Please choose your handle."
 msgstr "กรุณาเลือกแฮนเดิลของคุณ"
 
 #: src/screens/Signup/state.ts:281
-#: src/screens/Signup/StepInfo/index.tsx:122
+#: src/screens/Signup/StepInfo/index.tsx:151
 msgid "Please choose your password."
 msgstr "โปรดเลือกรหัสผ่านของคุณ"
 
@@ -6860,7 +6871,7 @@ msgid "Please complete the verification captcha."
 msgstr "โปรดทำการยืนยัน Captcha ให้เสร็จ"
 
 #: src/components/ageAssurance/AgeAssuranceInitDialog.tsx:101
-#: src/screens/Signup/StepInfo/index.tsx:111
+#: src/screens/Signup/StepInfo/index.tsx:140
 msgid "Please double-check that you have entered your email address correctly."
 msgstr ""
 
@@ -6908,11 +6919,11 @@ msgid "Please enter the security code we sent to your previous email address."
 msgstr ""
 
 #: src/screens/Signup/state.ts:265
-#: src/screens/Signup/StepInfo/index.tsx:93
+#: src/screens/Signup/StepInfo/index.tsx:122
 msgid "Please enter your email."
 msgstr "กรุณากรอกอีเมลของคุณ"
 
-#: src/screens/Signup/StepInfo/index.tsx:86
+#: src/screens/Signup/StepInfo/index.tsx:115
 msgid "Please enter your invite code."
 msgstr "กรุณาใส่โค้ดเชิญ"
 
@@ -6939,6 +6950,10 @@ msgstr "กรุณาอธิบายว่าทำไมการตั้
 #: src/screens/Messages/components/ChatDisabled.tsx:122
 msgid "Please explain why you think your chats were incorrectly disabled"
 msgstr "กรุณาอธิบายว่าทำไมคุณคิดว่าแชทของคุณถูกปิดใช้งานแบบไม่ถูกต้อง"
+
+#: src/components/live/GoLiveDisabledDialog.tsx:123
+msgid "Please explain why you think your Go Live access was incorrectly disabled."
+msgstr ""
 
 #: src/components/FocusScope/index.tsx:91
 #: src/components/FocusScope/index.tsx:115
@@ -7146,11 +7161,6 @@ msgstr ""
 msgid "Primary Language"
 msgstr "ภาษาหลัก"
 
-#: src/view/shell/desktop/RightNav.tsx:113
-#: src/view/shell/desktop/RightNav.tsx:114
-msgid "Privacy"
-msgstr "ความเป็นส่วนตัว"
-
 #: src/screens/Settings/Settings.tsx:188
 #: src/screens/Settings/Settings.tsx:191
 msgid "Privacy and security"
@@ -7198,7 +7208,7 @@ msgid "profile"
 msgstr "ข้อมูลส่วนตัว"
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:316
-#: src/view/shell/desktop/LeftNav.tsx:787
+#: src/view/shell/desktop/LeftNav.tsx:777
 #: src/view/shell/Drawer.tsx:77
 #: src/view/shell/Drawer.tsx:596
 msgid "Profile"
@@ -7361,13 +7371,13 @@ msgstr ""
 msgid "Read the Bluesky blog"
 msgstr "อ่าน Bluesky blog"
 
-#: src/screens/Signup/StepInfo/Policies.tsx:56
-#: src/screens/Signup/StepInfo/Policies.tsx:82
+#: src/screens/Signup/StepInfo/Policies.tsx:52
+#: src/screens/Signup/StepInfo/Policies.tsx:78
 msgid "Read the Bluesky Privacy Policy"
 msgstr "อ่านนโยบายความเป็นส่วนตัวของ Bluesky"
 
-#: src/screens/Signup/StepInfo/Policies.tsx:49
-#: src/screens/Signup/StepInfo/Policies.tsx:69
+#: src/screens/Signup/StepInfo/Policies.tsx:45
+#: src/screens/Signup/StepInfo/Policies.tsx:65
 msgid "Read the Bluesky Terms of Service"
 msgstr "อ่านนโยบาย เงื่อนไข และ ข้อตกลง ในการให้บริการของ Bluesky"
 
@@ -7549,8 +7559,8 @@ msgstr ""
 
 #: src/components/verification/VerificationRemovePrompt.tsx:46
 #: src/components/verification/VerificationsDialog.tsx:252
-#: src/view/com/profile/ProfileMenu.tsx:353
-#: src/view/com/profile/ProfileMenu.tsx:356
+#: src/view/com/profile/ProfileMenu.tsx:362
+#: src/view/com/profile/ProfileMenu.tsx:365
 msgid "Remove verification"
 msgstr ""
 
@@ -7681,11 +7691,12 @@ msgstr "การตอบกลับถูกซ่อนเรียบร้
 #: src/components/dms/MessageContextMenu.tsx:168
 #: src/components/dms/MessagesListBlockedFooter.tsx:85
 #: src/components/dms/MessagesListBlockedFooter.tsx:92
+#: src/components/live/LiveStatusDialog.tsx:257
 msgid "Report"
 msgstr "รายงาน"
 
-#: src/view/com/profile/ProfileMenu.tsx:420
-#: src/view/com/profile/ProfileMenu.tsx:423
+#: src/view/com/profile/ProfileMenu.tsx:429
+#: src/view/com/profile/ProfileMenu.tsx:432
 msgid "Report account"
 msgstr "รายงานบัญชี"
 
@@ -7697,8 +7708,8 @@ msgstr "รายงานบัญชี"
 msgid "Report conversation"
 msgstr "รายงานการสนทนา"
 
-#: src/components/moderation/ReportDialog/index.tsx:78
-#: src/components/moderation/ReportDialog/index.tsx:239
+#: src/components/moderation/ReportDialog/index.tsx:90
+#: src/components/moderation/ReportDialog/index.tsx:253
 msgid "Report dialog"
 msgstr "รายงานการสนทนา"
 
@@ -7731,27 +7742,32 @@ msgstr "รายงานชุดเริ่มต้น"
 msgid "Report submitted"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/copy.ts:45
+#: src/components/moderation/ReportDialog/copy.ts:51
 msgid "Report this conversation"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/copy.ts:31
+#: src/components/moderation/ReportDialog/copy.ts:37
 msgid "Report this feed"
 msgstr "รายงานฟีดนี้"
 
-#: src/components/moderation/ReportDialog/copy.ts:25
+#: src/components/moderation/ReportDialog/copy.ts:31
 msgid "Report this list"
 msgstr "รายงานลิสต์นี้"
 
-#: src/components/moderation/ReportDialog/copy.ts:51
+#: src/components/live/LiveStatusDialog.tsx:240
+#: src/components/moderation/ReportDialog/copy.ts:19
+msgid "Report this livestream"
+msgstr ""
+
+#: src/components/moderation/ReportDialog/copy.ts:57
 msgid "Report this message"
 msgstr "รายงานข้อความนี้"
 
-#: src/components/moderation/ReportDialog/copy.ts:19
+#: src/components/moderation/ReportDialog/copy.ts:25
 msgid "Report this post"
 msgstr "รายงานโพสต์นี้"
 
-#: src/components/moderation/ReportDialog/copy.ts:37
+#: src/components/moderation/ReportDialog/copy.ts:43
 msgid "Report this starter pack"
 msgstr "รายงานชุดเริ่มต้นนี้"
 
@@ -7831,7 +7847,7 @@ msgstr "ต้องมีข้อความแทนภาพก่อนโ
 msgid "Require an email code to sign in to your account."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/index.tsx:180
+#: src/screens/Signup/StepInfo/index.tsx:209
 msgid "Required for this provider"
 msgstr "จำเป็นสำหรับผู้ให้บริการนี้"
 
@@ -7897,12 +7913,14 @@ msgstr ""
 msgid "Retries the last action, which errored out"
 msgstr "ลองทำกิจกรรมล่าสุดซึ่งเกิดข้อผิดพลาดอีกครั้ง"
 
+#: src/components/ageAssurance/AgeAssuranceErrors.tsx:27
+#: src/components/ageAssurance/AgeAssuranceErrors.tsx:30
 #: src/components/contacts/screens/VerifyNumber.tsx:347
 #: src/components/contacts/screens/VerifyNumber.tsx:352
 #: src/components/dms/MessageItem.tsx:322
 #: src/components/Error.tsx:65
 #: src/components/Lists.tsx:114
-#: src/components/moderation/ReportDialog/index.tsx:273
+#: src/components/moderation/ReportDialog/index.tsx:287
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:55
 #: src/components/Post/Embed/VideoEmbed/VideoEmbedInner/VideoFallback.tsx:58
 #: src/components/StarterPack/ProfileStarterPacks.tsx:374
@@ -7924,7 +7942,7 @@ msgstr "ลองทำกิจกรรมล่าสุดซึ่งเก
 msgid "Retry"
 msgstr "ลองใหม่อีกครั้ง"
 
-#: src/components/moderation/ReportDialog/index.tsx:270
+#: src/components/moderation/ReportDialog/index.tsx:284
 #: src/view/screens/Storybook/Admonitions.tsx:60
 msgid "Retry loading report options"
 msgstr ""
@@ -8011,7 +8029,7 @@ msgstr ""
 msgid "Save to my feeds"
 msgstr "บันทึกที่ฟีตของฉัน"
 
-#: src/view/shell/desktop/LeftNav.tsx:765
+#: src/view/shell/desktop/LeftNav.tsx:755
 #: src/view/shell/Drawer.tsx:571
 msgctxt "link to bookmarks screen"
 msgid "Saved"
@@ -8073,7 +8091,7 @@ msgstr "ค้นหา"
 msgid "Search @{0}'s posts"
 msgstr ""
 
-#: src/components/ProgressGuide/FollowDialog.tsx:657
+#: src/components/ProgressGuide/FollowDialog.tsx:662
 msgid "Search by name or interest"
 msgstr ""
 
@@ -8086,12 +8104,12 @@ msgid "Search feeds"
 msgstr ""
 
 #. Accessibility label for a tab that searches for accounts in a category (e.g. Art, Video Games, Sports, etc.) that are suggested for the user to follow. The tab is not currently active and can be selected.
-#: src/components/ProgressGuide/FollowDialog.tsx:486
+#: src/components/ProgressGuide/FollowDialog.tsx:491
 msgid "Search for \"{interestsDisplayName}\""
 msgstr ""
 
 #. Accessibility label for a tab that searches for accounts in a category (e.g. Art, Video Games, Sports, etc.) that are suggested for the user to follow. The tab is currently selected.
-#: src/components/ProgressGuide/FollowDialog.tsx:479
+#: src/components/ProgressGuide/FollowDialog.tsx:484
 msgid "Search for \"{interestsDisplayName}\" (active)"
 msgstr ""
 
@@ -8137,13 +8155,13 @@ msgstr ""
 msgid "Search my posts"
 msgstr ""
 
-#: src/view/com/profile/ProfileMenu.tsx:271
-#: src/view/com/profile/ProfileMenu.tsx:274
+#: src/view/com/profile/ProfileMenu.tsx:272
+#: src/view/com/profile/ProfileMenu.tsx:275
 msgid "Search posts"
 msgstr ""
 
 #: src/components/dialogs/SearchablePeopleList.tsx:534
-#: src/components/ProgressGuide/FollowDialog.tsx:676
+#: src/components/ProgressGuide/FollowDialog.tsx:681
 msgid "Search profiles"
 msgstr "ค้นหาโปรไฟล์"
 
@@ -8156,7 +8174,7 @@ msgid "Search..."
 msgstr ""
 
 #: src/components/dialogs/SearchablePeopleList.tsx:535
-#: src/components/ProgressGuide/FollowDialog.tsx:677
+#: src/components/ProgressGuide/FollowDialog.tsx:682
 msgid "Searches for profiles"
 msgstr ""
 
@@ -8224,7 +8242,7 @@ msgstr ""
 msgid "Select a color"
 msgstr "เลือกสี"
 
-#: src/components/moderation/ReportDialog/index.tsx:358
+#: src/components/moderation/ReportDialog/index.tsx:372
 msgid "Select a reason"
 msgstr ""
 
@@ -8299,7 +8317,7 @@ msgstr "กำลังเลือกภาษา..."
 msgid "Select languages"
 msgstr "เลือกภาษา"
 
-#: src/components/moderation/ReportDialog/index.tsx:408
+#: src/components/moderation/ReportDialog/index.tsx:422
 msgid "Select moderation service"
 msgstr ""
 
@@ -8340,7 +8358,7 @@ msgstr ""
 msgid "Select which languages you want your subscribed feeds to include. If none are selected, all languages will be shown."
 msgstr "เลือกภาษาที่คุณต้องการให้ฟีดที่คุณติดตามรวมอยู่ หากไม่เลือกภาษาใดๆ จะมีการแสดงภาษาทั้งหมด"
 
-#: src/screens/Signup/StepInfo/index.tsx:273
+#: src/screens/Signup/StepInfo/index.tsx:302
 msgid "Select your date of birth"
 msgstr "เลือกเดือนที่เกิด"
 
@@ -8403,7 +8421,7 @@ msgstr ""
 msgid "Send post to..."
 msgstr "ส่งโพสต์ถึง..."
 
-#: src/components/moderation/ReportDialog/index.tsx:799
+#: src/components/moderation/ReportDialog/index.tsx:813
 msgid "Send report to {title}"
 msgstr ""
 
@@ -8456,7 +8474,7 @@ msgstr "ตั้งค่าบัญชีของคุณ"
 msgid "Set who can reply to your post"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:211
+#: src/ageAssurance/components/NoAccessScreen.tsx:220
 msgid "Set your birthdate below and we'll get you back to posting and exploring in no time!"
 msgstr ""
 
@@ -8466,7 +8484,7 @@ msgstr "ตั้งอีเมลเพื่อการรีเซตรห
 
 #: src/Navigation.tsx:215
 #: src/screens/Settings/Settings.tsx:105
-#: src/view/shell/desktop/LeftNav.tsx:805
+#: src/view/shell/desktop/LeftNav.tsx:795
 #: src/view/shell/Drawer.tsx:609
 msgid "Settings"
 msgstr "การตั้งค่า"
@@ -8548,7 +8566,7 @@ msgstr "แชร์สตอรี่สุดเจ๋ง!"
 msgid "Share a fun fact!"
 msgstr "แชร์เรื่องจริงสนุก ๆ!"
 
-#: src/view/com/profile/ProfileMenu.tsx:507
+#: src/view/com/profile/ProfileMenu.tsx:516
 msgid "Share anyway"
 msgstr "แชร์ตลอด"
 
@@ -8596,8 +8614,8 @@ msgstr "แชร์ชุดเริ่มต้นนี้และช่ว
 #: src/screens/ProfileList/components/MoreOptionsMenu.tsx:171
 #: src/screens/StarterPack/StarterPackScreen.tsx:613
 #: src/screens/StarterPack/StarterPackScreen.tsx:621
-#: src/view/com/profile/ProfileMenu.tsx:251
-#: src/view/com/profile/ProfileMenu.tsx:264
+#: src/view/com/profile/ProfileMenu.tsx:252
+#: src/view/com/profile/ProfileMenu.tsx:265
 msgid "Share via..."
 msgstr ""
 
@@ -8874,7 +8892,7 @@ msgstr ""
 msgid "Someone reacted {0} to {1}"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:83
+#: src/components/moderation/ReportDialog/index.tsx:95
 msgid "Something wasn't quite right with the data you're trying to report. Please contact support."
 msgstr ""
 
@@ -8883,7 +8901,7 @@ msgid "Something went wrong"
 msgstr "เกิดข้อผิดพลาดบางอย่าง"
 
 #: src/components/ageAssurance/AgeAssuranceInitDialog.tsx:138
-#: src/components/moderation/ReportDialog/index.tsx:265
+#: src/components/moderation/ReportDialog/index.tsx:279
 #: src/screens/Deactivated.tsx:85
 #: src/screens/Settings/components/DeactivateAccountDialog.tsx:59
 #: src/view/screens/Storybook/Admonitions.tsx:55
@@ -8903,7 +8921,7 @@ msgstr "เกิดข้อผิดพลาดบางอย่าง!"
 msgid "Something went wrong. Please try again in a moment."
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:219
+#: src/components/moderation/ReportDialog/index.tsx:233
 msgid "Something went wrong. Please try again."
 msgstr ""
 
@@ -9033,6 +9051,8 @@ msgstr ""
 
 #: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:117
 #: src/components/ageAssurance/AgeAssuranceAppealDialog.tsx:123
+#: src/components/live/GoLiveDisabledDialog.tsx:138
+#: src/components/live/GoLiveDisabledDialog.tsx:139
 #: src/components/moderation/LabelsOnMeDialog.tsx:342
 #: src/components/moderation/LabelsOnMeDialog.tsx:343
 #: src/screens/Messages/components/ChatDisabled.tsx:154
@@ -9048,9 +9068,9 @@ msgstr ""
 msgid "Submit Appeal"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:486
-#: src/components/moderation/ReportDialog/index.tsx:547
-#: src/components/moderation/ReportDialog/index.tsx:554
+#: src/components/moderation/ReportDialog/index.tsx:500
+#: src/components/moderation/ReportDialog/index.tsx:561
+#: src/components/moderation/ReportDialog/index.tsx:568
 msgid "Submit report"
 msgstr ""
 
@@ -9177,6 +9197,10 @@ msgstr ""
 msgid "Tap for more information"
 msgstr ""
 
+#: src/screens/Signup/StepInfo/index.tsx:336
+msgid "Tap here to confirm your location with GPS."
+msgstr ""
+
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:164
 msgid "Tap to acknowledge that you understand and agree to these updates and continue using Bluesky"
 msgstr ""
@@ -9203,7 +9227,7 @@ msgstr ""
 msgid "Task complete - 10 likes!"
 msgstr "ภารกิจสำเร็จ - การกดถูกใจ 10!"
 
-#: src/components/ProgressGuide/List.tsx:64
+#: src/components/ProgressGuide/List.tsx:97
 msgid "Teach our algorithm what you like"
 msgstr "สอนอัลกอริธึมของเราเกี่ยวกับสิ่งที่คุณชอบ"
 
@@ -9223,11 +9247,6 @@ msgstr ""
 msgid "Tell us a little more"
 msgstr "เล่าให้เราฟังนิดนึง"
 
-#: src/view/shell/desktop/RightNav.tsx:119
-#: src/view/shell/desktop/RightNav.tsx:120
-msgid "Terms"
-msgstr "เงื่อนไข"
-
 #: src/components/dialogs/BirthDateSettings.tsx:182
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:30
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:97
@@ -9244,6 +9263,7 @@ msgstr "เงื่อนไขการให้บริการ"
 msgid "Text & tags"
 msgstr "ข้อความและแท็ก"
 
+#: src/components/live/GoLiveDisabledDialog.tsx:121
 #: src/components/moderation/LabelsOnMeDialog.tsx:306
 #: src/screens/Messages/components/ChatDisabled.tsx:120
 msgid "Text input field"
@@ -9257,8 +9277,8 @@ msgstr ""
 msgid "Thanks, you have successfully verified your email address. You can close this dialog."
 msgstr "ขอบคุณน้า~ คุณได้ยืนยันอีเมลของคุณสำเร็จแล้วจ้า สามารถปิดหน้านี้ได้เลยน้า"
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:385
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:113
+#: src/ageAssurance/components/NoAccessScreen.tsx:394
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:121
 msgid "Thanks! You're all set."
 msgstr ""
 
@@ -9289,7 +9309,7 @@ msgstr ""
 
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:186
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:391
-#: src/view/com/profile/ProfileMenu.tsx:483
+#: src/view/com/profile/ProfileMenu.tsx:492
 msgid "The account will be able to interact with you after unblocking."
 msgstr "บัญชีจะสามารถโต้ตอบกับคุณได้หลังจากที่ปลดบล็อกแล้ว"
 
@@ -9472,12 +9492,12 @@ msgstr ""
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:253
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:279
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:294
-#: src/view/com/profile/ProfileMenu.tsx:136
-#: src/view/com/profile/ProfileMenu.tsx:146
-#: src/view/com/profile/ProfileMenu.tsx:160
-#: src/view/com/profile/ProfileMenu.tsx:170
-#: src/view/com/profile/ProfileMenu.tsx:183
-#: src/view/com/profile/ProfileMenu.tsx:195
+#: src/view/com/profile/ProfileMenu.tsx:139
+#: src/view/com/profile/ProfileMenu.tsx:149
+#: src/view/com/profile/ProfileMenu.tsx:163
+#: src/view/com/profile/ProfileMenu.tsx:173
+#: src/view/com/profile/ProfileMenu.tsx:186
+#: src/view/com/profile/ProfileMenu.tsx:198
 msgid "There was an issue! {0}"
 msgstr "เกิดปัญหาที่ {0}!"
 
@@ -9540,6 +9560,7 @@ msgstr ""
 msgid "This appeal will be sent to <0>{sourceName}</0>."
 msgstr "คำร้องนี้จะถูกส่งไปยัง <0>{sourceName}</0>"
 
+#: src/components/live/GoLiveDisabledDialog.tsx:113
 #: src/screens/Messages/components/ChatDisabled.tsx:116
 msgid "This appeal will be sent to Bluesky's moderation service."
 msgstr "คำร้องนี้จะถูกส่งไปยังบริการการควบคุมของ Bluesky"
@@ -9697,7 +9718,7 @@ msgstr ""
 msgid "This post's author has disabled quote posts."
 msgstr ""
 
-#: src/view/com/profile/ProfileMenu.tsx:504
+#: src/view/com/profile/ProfileMenu.tsx:513
 msgid "This profile is only visible to logged-in users. It won't be visible to people who aren't signed in."
 msgstr ""
 
@@ -9705,7 +9726,7 @@ msgstr ""
 msgid "This reply will be sorted into a hidden section at the bottom of your thread and will mute notifications for subsequent replies - both for yourself and others."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/Policies.tsx:35
+#: src/screens/Signup/StepInfo/Policies.tsx:31
 msgid "This service has not provided terms of service or a privacy policy."
 msgstr ""
 
@@ -9806,7 +9827,7 @@ msgstr ""
 msgid "To disable your email 2FA method, please verify your access to <0>{0}</0>"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:233
+#: src/ageAssurance/components/NoAccessScreen.tsx:242
 msgid "To log out, <0>click here</0>."
 msgstr ""
 
@@ -9869,8 +9890,12 @@ msgstr ""
 msgid "Tree view"
 msgstr ""
 
-#: src/view/shell/desktop/SidebarTrendingTopics.tsx:59
+#: src/view/shell/desktop/SidebarTrendingTopics.tsx:48
 msgid "Trending"
+msgstr ""
+
+#: src/view/shell/desktop/SidebarTrendingTopics.tsx:55
+msgid "Trending options"
 msgstr ""
 
 #: src/components/interstitials/TrendingVideos.tsx:86
@@ -9945,7 +9970,7 @@ msgstr ""
 msgid "Unapply Pull Request {currentChannel}"
 msgstr ""
 
-#: src/components/ageAssurance/AgeRestrictedScreen.tsx:40
+#: src/components/ageAssurance/AgeRestrictedScreen.tsx:41
 msgid "Unavailable"
 msgstr ""
 
@@ -9962,7 +9987,7 @@ msgstr ""
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:394
 #: src/screens/ProfileList/components/Header.tsx:171
 #: src/screens/ProfileList/components/Header.tsx:178
-#: src/view/com/profile/ProfileMenu.tsx:495
+#: src/view/com/profile/ProfileMenu.tsx:504
 msgid "Unblock"
 msgstr "ปลดบล็อก"
 
@@ -9973,14 +9998,14 @@ msgstr "ปลดบล็อก"
 
 #: src/components/dms/ConvoMenu.tsx:261
 #: src/components/dms/ConvoMenu.tsx:264
-#: src/view/com/profile/ProfileMenu.tsx:400
-#: src/view/com/profile/ProfileMenu.tsx:406
+#: src/view/com/profile/ProfileMenu.tsx:409
+#: src/view/com/profile/ProfileMenu.tsx:415
 msgid "Unblock account"
 msgstr "ปลดบล็อกบัญชี"
 
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:184
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:389
-#: src/view/com/profile/ProfileMenu.tsx:477
+#: src/view/com/profile/ProfileMenu.tsx:486
 msgid "Unblock Account?"
 msgstr "ปลดบล็อกบัญชีหรือไม่?"
 
@@ -10008,8 +10033,8 @@ msgstr ""
 msgid "Unfollow {0}"
 msgstr "เลิกติดตาม {0}"
 
-#: src/view/com/profile/ProfileMenu.tsx:291
-#: src/view/com/profile/ProfileMenu.tsx:301
+#: src/view/com/profile/ProfileMenu.tsx:292
+#: src/view/com/profile/ProfileMenu.tsx:302
 msgid "Unfollow account"
 msgstr "เลิกติดตามบัญชี"
 
@@ -10017,12 +10042,16 @@ msgstr "เลิกติดตามบัญชี"
 msgid "Unfollows the user"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:470
+#: src/components/moderation/ReportDialog/index.tsx:484
 msgid "Unfortunately, none of your subscribed labelers supports this report type."
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:188
+#: src/ageAssurance/components/NoAccessScreen.tsx:197
 msgid "Unfortunately, the birthdate you have saved to your profile makes you too young to access Bluesky."
+msgstr ""
+
+#: src/ageAssurance/components/NoAccessScreen.tsx:182
+msgid "Unfortunately, your declared age indicates that you are not old enough to access Bluesky in your region."
 msgstr ""
 
 #: src/components/verification/VerificationsDialog.tsx:211
@@ -10064,8 +10093,8 @@ msgstr ""
 
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:659
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:665
-#: src/view/com/profile/ProfileMenu.tsx:379
-#: src/view/com/profile/ProfileMenu.tsx:385
+#: src/view/com/profile/ProfileMenu.tsx:388
+#: src/view/com/profile/ProfileMenu.tsx:394
 msgid "Unmute account"
 msgstr "เปิดเสียงบัญชี"
 
@@ -10373,13 +10402,13 @@ msgstr ""
 
 #: src/components/verification/VerificationCreatePrompt.tsx:84
 #: src/components/verification/VerificationCreatePrompt.tsx:86
-#: src/view/com/profile/ProfileMenu.tsx:363
-#: src/view/com/profile/ProfileMenu.tsx:366
+#: src/view/com/profile/ProfileMenu.tsx:372
+#: src/view/com/profile/ProfileMenu.tsx:375
 msgid "Verify account"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:322
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:168
+#: src/ageAssurance/components/NoAccessScreen.tsx:331
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:176
 msgid "Verify again"
 msgstr ""
 
@@ -10405,10 +10434,10 @@ msgstr ""
 msgid "Verify email dialog"
 msgstr "กล่องโต้ตอบตรวจสอบอีเมล"
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:310
-#: src/ageAssurance/components/NoAccessScreen.tsx:324
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:156
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:170
+#: src/ageAssurance/components/NoAccessScreen.tsx:319
+#: src/ageAssurance/components/NoAccessScreen.tsx:333
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:164
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:178
 msgid "Verify now"
 msgstr ""
 
@@ -10530,7 +10559,7 @@ msgstr "ดูโปรไฟล์ของ {0}"
 msgid "View {displayName}'s profile"
 msgstr "ดูโปรไฟล์ของ {displayName}"
 
-#: src/components/ProfileHoverCard/index.web.tsx:480
+#: src/components/ProfileHoverCard/index.web.tsx:481
 msgid "View blocked user's profile"
 msgstr "ดูโปรไฟล์ของผู้ใช้ที่ถูกบล็อก"
 
@@ -10570,9 +10599,9 @@ msgstr ""
 msgid "View post"
 msgstr ""
 
-#: src/components/ProfileHoverCard/index.web.tsx:466
-#: src/components/ProfileHoverCard/index.web.tsx:486
-#: src/components/ProfileHoverCard/index.web.tsx:513
+#: src/components/ProfileHoverCard/index.web.tsx:467
+#: src/components/ProfileHoverCard/index.web.tsx:487
+#: src/components/ProfileHoverCard/index.web.tsx:514
 #: src/view/com/posts/PostFeedErrorMessage.tsx:182
 #: src/view/com/util/PostMeta.tsx:90
 #: src/view/com/util/PostMeta.tsx:127
@@ -10606,11 +10635,6 @@ msgstr "ดูบัญชีที่คุณบล็อก"
 #: src/screens/Moderation/index.tsx:246
 msgid "View your default post interaction settings"
 msgstr ""
-
-#: src/view/com/home/HomeHeaderLayout.web.tsx:57
-#: src/view/com/home/HomeHeaderLayoutMobile.tsx:72
-msgid "View your feeds and explore more"
-msgstr "ดูฟีดของคุณและสำรวจเพิ่มเติม"
 
 #: src/screens/Moderation/index.tsx:276
 msgid "View your moderation lists"
@@ -10668,8 +10692,8 @@ msgstr "เตือนเนื้อหา"
 msgid "Warn content and filter from feeds"
 msgstr "เตือนเนื้อหาและกรองจากฟีด"
 
-#: src/components/live/LiveStatusDialog.tsx:156
-#: src/components/live/LiveStatusDialog.tsx:169
+#: src/components/live/LiveStatusDialog.tsx:172
+#: src/components/live/LiveStatusDialog.tsx:185
 msgid "Watch now"
 msgstr ""
 
@@ -10745,6 +10769,10 @@ msgstr ""
 msgid "We were unable to determine if you are allowed to upload videos. Please try again."
 msgstr "เราไม่สามารถกำหนดได้ว่าคุณได้รับอนุญาตให้อัปโหลดวิดีโอหรือไม่ กรุณาลองอีกครั้ง."
 
+#: src/components/ageAssurance/AgeAssuranceErrors.tsx:18
+msgid "We were unable to load the age assurance configuration for your region, probably due to a network error. Some content and features may be unavailable temporarily. Please try again later."
+msgstr ""
+
 #: src/components/dialogs/BirthDateSettings.tsx:67
 msgid "We were unable to load your birthdate preferences. Please try again."
 msgstr ""
@@ -10792,7 +10820,7 @@ msgid "We're having issues initializing the age assurance process for your accou
 msgstr ""
 
 #: src/components/dialogs/SearchablePeopleList.tsx:107
-#: src/components/ProgressGuide/FollowDialog.tsx:184
+#: src/components/ProgressGuide/FollowDialog.tsx:189
 msgid "We're having network issues, try again"
 msgstr "เรากำลังประสบปัญหาเครือข่าย โปรดลองอีกครั้ง"
 
@@ -10804,8 +10832,8 @@ msgstr ""
 msgid "We're so excited to have you join us!"
 msgstr "เราตื่นเต้นมากที่คุณมาร่วมกับเรา!"
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:378
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:106
+#: src/ageAssurance/components/NoAccessScreen.tsx:387
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:114
 msgid "We're sorry, but based on your device's location, you are currently located in a region that requires age assurance."
 msgstr ""
 
@@ -10915,27 +10943,31 @@ msgstr ""
 msgid "Why are you appealing?"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/copy.ts:46
+#: src/components/moderation/ReportDialog/copy.ts:52
 msgid "Why should this conversation be reviewed?"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/copy.ts:32
+#: src/components/moderation/ReportDialog/copy.ts:38
 msgid "Why should this feed be reviewed?"
 msgstr "ทำไมฟีดนี้จึงควรได้รับการตรวจสอบ?"
 
-#: src/components/moderation/ReportDialog/copy.ts:26
+#: src/components/moderation/ReportDialog/copy.ts:32
 msgid "Why should this list be reviewed?"
 msgstr "ทำไมลิสต์นี้จึงควรได้รับการตรวจสอบ?"
 
-#: src/components/moderation/ReportDialog/copy.ts:52
+#: src/components/moderation/ReportDialog/copy.ts:20
+msgid "Why should this livestream be reviewed?"
+msgstr ""
+
+#: src/components/moderation/ReportDialog/copy.ts:58
 msgid "Why should this message be reviewed?"
 msgstr "ทำไมข้อความนี้จึงควรได้รับการตรวจสอบ?"
 
-#: src/components/moderation/ReportDialog/copy.ts:20
+#: src/components/moderation/ReportDialog/copy.ts:26
 msgid "Why should this post be reviewed?"
 msgstr "ทำไมโพสต์นี้จึงควรได้รับการตรวจสอบ?"
 
-#: src/components/moderation/ReportDialog/copy.ts:38
+#: src/components/moderation/ReportDialog/copy.ts:44
 msgid "Why should this starter pack be reviewed?"
 msgstr "ทำไมชุดเริ่มต้นนี้จึงควรได้รับการตรวจสอบ?"
 
@@ -11020,8 +11052,12 @@ msgstr ""
 msgid "You are creating an account on"
 msgstr ""
 
-#: src/ageAssurance/components/NoAccessScreen.tsx:292
-#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:126
+#: src/components/live/GoLiveDisabledDialog.tsx:107
+msgid "You are currently blocked from using the Go Live feature. To appeal this moderation decision, please submit the form below."
+msgstr ""
+
+#: src/ageAssurance/components/NoAccessScreen.tsx:301
+#: src/components/ageAssurance/AgeAssuranceAccountCard.tsx:134
 msgid "You are currently unable to access Bluesky's Age Assurance flow. Please <0>contact our moderation team</0> if you believe this is an error."
 msgstr ""
 
@@ -11122,9 +11158,9 @@ msgstr "คุณสามารถเปิดใช้งานบัญชี
 msgid "You can select up to {MAX_IMAGES, plural, other {# images}} in total."
 msgstr ""
 
-#: src/components/interstitials/Trending.tsx:130
+#: src/components/interstitials/Trending.tsx:129
 #: src/components/interstitials/TrendingVideos.tsx:137
-#: src/view/shell/desktop/SidebarTrendingTopics.tsx:110
+#: src/view/shell/desktop/SidebarTrendingTopics.tsx:128
 msgid "You can update this later from your settings."
 msgstr ""
 
@@ -11275,8 +11311,12 @@ msgstr ""
 msgid "You may only add up to 3 feeds"
 msgstr "คุณสามารถเพิ่มได้สูงสุด 3 ฟีด"
 
-#: src/screens/Signup/StepInfo/Policies.tsx:104
-msgid "You must be 13 years of age or older to create an account."
+#: src/screens/Signup/StepInfo/index.tsx:322
+msgid "You must be {0} years of age or older to create an account in your region."
+msgstr ""
+
+#: src/screens/Signup/StepInfo/index.tsx:317
+msgid "You must be {MIN_ACCESS_AGE} years of age or older to create an account."
 msgstr ""
 
 #: src/components/dialogs/BirthDateSettings.tsx:178
@@ -11287,7 +11327,7 @@ msgstr ""
 msgid "You must be following at least seven other people to generate a starter pack."
 msgstr "คุณต้องติดตามผู้อื่นอย่างน้อย 7 คนจึงจะสามารถสร้างชุดเริ่มต้นได้"
 
-#: src/components/ageAssurance/AgeRestrictedScreen.tsx:53
+#: src/components/ageAssurance/AgeRestrictedScreen.tsx:60
 msgid "You must complete age assurance in order to access this screen."
 msgstr ""
 
@@ -11467,7 +11507,7 @@ msgstr ""
 msgid "Your appeal has been submitted. If your appeal succeeds, you will receive an email."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/index.tsx:260
+#: src/screens/Signup/StepInfo/index.tsx:289
 msgid "Your birth date"
 msgstr "วันเกิดของคุณ"
 
@@ -11512,7 +11552,7 @@ msgstr ""
 #: src/screens/Login/ForgotPasswordForm.tsx:51
 #: src/screens/Settings/components/ChangePasswordDialog.tsx:81
 #: src/screens/Signup/state.ts:273
-#: src/screens/Signup/StepInfo/index.tsx:100
+#: src/screens/Signup/StepInfo/index.tsx:129
 msgid "Your email appears to be invalid."
 msgstr "อีเมลของคุณดูเหมือนจะไม่ถูกต้อง"
 
@@ -11557,6 +11597,10 @@ msgstr ""
 msgid "Your location data is not tracked and does not leave your device."
 msgstr ""
 
+#: src/screens/Signup/StepInfo/index.tsx:367
+msgid "Your location has been updated."
+msgstr ""
+
 #: src/components/dialogs/MutedWords.tsx:374
 msgid "Your muted words"
 msgstr "คำที่คุณปิดเสียง"
@@ -11565,7 +11609,7 @@ msgstr "คำที่คุณปิดเสียง"
 msgid "Your password has been changed successfully! Please use your new password when you sign in to Bluesky from now on."
 msgstr ""
 
-#: src/screens/Signup/StepInfo/index.tsx:129
+#: src/screens/Signup/StepInfo/index.tsx:158
 msgid "Your password must be at least 8 characters long."
 msgstr ""
 
@@ -11598,7 +11642,7 @@ msgstr "โปรไฟล์ โพสต์ ฟีด และลิสต์
 msgid "Your reply was sent"
 msgstr ""
 
-#: src/components/moderation/ReportDialog/index.tsx:497
+#: src/components/moderation/ReportDialog/index.tsx:511
 msgid "Your report will be sent to <0>{0}</0>."
 msgstr ""
 

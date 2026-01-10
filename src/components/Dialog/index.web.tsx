@@ -188,7 +188,6 @@ export function Inner({
           a.border,
           t.atoms.bg,
           {
-            maxWidth: 600,
             borderColor: t.palette.contrast_200,
             shadowColor: t.palette.black,
             shadowOpacity: t.name === 'light' ? 0.1 : 0.4,

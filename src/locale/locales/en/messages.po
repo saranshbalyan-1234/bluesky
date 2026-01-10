@@ -2106,7 +2106,7 @@ msgid "Close"
 msgstr ""
 
 #: src/components/Dialog/index.web.tsx:118
-#: src/components/Dialog/index.web.tsx:296
+#: src/components/Dialog/index.web.tsx:295
 msgid "Close active dialog"
 msgstr ""
 
@@ -3611,7 +3611,7 @@ msgstr ""
 
 #: src/Navigation.tsx:788
 #: src/screens/Search/Shell.tsx:327
-#: src/view/shell/desktop/LeftNav.tsx:690
+#: src/view/shell/desktop/LeftNav.tsx:680
 #: src/view/shell/Drawer.tsx:414
 msgid "Explore"
 msgstr ""
@@ -3912,8 +3912,6 @@ msgstr ""
 msgid "Feed unavailable"
 msgstr ""
 
-#: src/view/shell/desktop/RightNav.tsx:104
-#: src/view/shell/desktop/RightNav.tsx:105
 #: src/view/shell/Drawer.tsx:368
 msgid "Feedback"
 msgstr ""
@@ -3930,7 +3928,7 @@ msgstr ""
 #: src/screens/StarterPack/StarterPackScreen.tsx:190
 #: src/view/screens/Feeds.tsx:511
 #: src/view/screens/Profile.tsx:239
-#: src/view/shell/desktop/LeftNav.tsx:728
+#: src/view/shell/desktop/LeftNav.tsx:718
 #: src/view/shell/Drawer.tsx:530
 msgid "Feeds"
 msgstr ""
@@ -4558,8 +4556,6 @@ msgstr ""
 
 #: src/screens/Settings/Settings.tsx:254
 #: src/screens/Settings/Settings.tsx:258
-#: src/view/shell/desktop/RightNav.tsx:125
-#: src/view/shell/desktop/RightNav.tsx:128
 #: src/view/shell/Drawer.tsx:381
 msgid "Help"
 msgstr ""
@@ -4719,7 +4715,7 @@ msgstr ""
 #: src/Navigation.tsx:783
 #: src/Navigation.tsx:803
 #: src/view/shell/bottom-bar/BottomBar.tsx:178
-#: src/view/shell/desktop/LeftNav.tsx:672
+#: src/view/shell/desktop/LeftNav.tsx:662
 #: src/view/shell/Drawer.tsx:440
 msgid "Home"
 msgstr ""
@@ -5427,7 +5423,7 @@ msgstr ""
 #: src/view/screens/Lists.tsx:67
 #: src/view/screens/Profile.tsx:233
 #: src/view/screens/Profile.tsx:241
-#: src/view/shell/desktop/LeftNav.tsx:746
+#: src/view/shell/desktop/LeftNav.tsx:736
 #: src/view/shell/Drawer.tsx:545
 msgid "Lists"
 msgstr ""
@@ -5500,11 +5496,6 @@ msgstr ""
 msgid "Logged-out visibility"
 msgstr ""
 
-#: src/view/shell/desktop/RightNav.tsx:137
-msgid "Logo by @sawaratsuki.bsky.social"
-msgstr ""
-
-#: src/view/shell/desktop/RightNav.tsx:134
 #: src/view/shell/Drawer.tsx:709
 msgid "Logo by <0>@sawaratsuki.bsky.social</0>"
 msgstr ""
@@ -6291,7 +6282,7 @@ msgstr ""
 #: src/screens/Settings/Settings.tsx:205
 #: src/view/screens/Notifications.tsx:130
 #: src/view/shell/bottom-bar/BottomBar.tsx:252
-#: src/view/shell/desktop/LeftNav.tsx:709
+#: src/view/shell/desktop/LeftNav.tsx:699
 #: src/view/shell/Drawer.tsx:493
 msgid "Notifications"
 msgstr ""
@@ -7165,11 +7156,6 @@ msgstr ""
 msgid "Primary Language"
 msgstr ""
 
-#: src/view/shell/desktop/RightNav.tsx:113
-#: src/view/shell/desktop/RightNav.tsx:114
-msgid "Privacy"
-msgstr ""
-
 #: src/screens/Settings/Settings.tsx:188
 #: src/screens/Settings/Settings.tsx:191
 msgid "Privacy and security"
@@ -7217,7 +7203,7 @@ msgid "profile"
 msgstr ""
 
 #: src/view/shell/bottom-bar/BottomBar.tsx:316
-#: src/view/shell/desktop/LeftNav.tsx:787
+#: src/view/shell/desktop/LeftNav.tsx:777
 #: src/view/shell/Drawer.tsx:77
 #: src/view/shell/Drawer.tsx:596
 msgid "Profile"
@@ -8038,7 +8024,7 @@ msgstr ""
 msgid "Save to my feeds"
 msgstr ""
 
-#: src/view/shell/desktop/LeftNav.tsx:765
+#: src/view/shell/desktop/LeftNav.tsx:755
 #: src/view/shell/Drawer.tsx:571
 msgctxt "link to bookmarks screen"
 msgid "Saved"
@@ -8493,7 +8479,7 @@ msgstr ""
 
 #: src/Navigation.tsx:215
 #: src/screens/Settings/Settings.tsx:105
-#: src/view/shell/desktop/LeftNav.tsx:805
+#: src/view/shell/desktop/LeftNav.tsx:795
 #: src/view/shell/Drawer.tsx:609
 msgid "Settings"
 msgstr ""
@@ -9254,11 +9240,6 @@ msgstr ""
 
 #: src/screens/StarterPack/Wizard/StepDetails.tsx:69
 msgid "Tell us a little more"
-msgstr ""
-
-#: src/view/shell/desktop/RightNav.tsx:120
-#: src/view/shell/desktop/RightNav.tsx:121
-msgid "Terms"
 msgstr ""
 
 #: src/components/dialogs/BirthDateSettings.tsx:182
@@ -10648,11 +10629,6 @@ msgstr ""
 
 #: src/screens/Moderation/index.tsx:246
 msgid "View your default post interaction settings"
-msgstr ""
-
-#: src/view/com/home/HomeHeaderLayout.web.tsx:57
-#: src/view/com/home/HomeHeaderLayoutMobile.tsx:72
-msgid "View your feeds and explore more"
 msgstr ""
 
 #: src/screens/Moderation/index.tsx:276

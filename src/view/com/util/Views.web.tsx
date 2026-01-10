@@ -175,7 +175,6 @@ const styles = StyleSheet.create({
   },
   container: {
     width: '100%',
-    maxWidth: 600,
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -184,7 +183,6 @@ const styles = StyleSheet.create({
   },
   containerScroll: {
     width: '100%',
-    maxWidth: 600,
     marginLeft: 'auto',
     marginRight: 'auto',
   },

@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   container: {
-    width: 600,
+    // width: 600,
     // @ts-ignore web only
     maxWidth: '100vw',
     // @ts-ignore web only
