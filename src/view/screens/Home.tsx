@@ -12,11 +12,8 @@ import {
   type NativeStackScreenProps,
   type NavigationProp,
 } from '#/lib/routes/types'
-import { ButtonIcon } from '#/components/Button'
-import {MagnifyingGlass_Stroke2_Corner0_Rounded as SearchIcon} from '#/components/icons/MagnifyingGlass'
-import {InlineLinkText, Link} from '#/components/Link'
-import {Hashtag_Stroke2_Corner0_Rounded as HashtagIcon} from '#/components/icons/Hashtag' // Added HashtagIcon import
 import {logEvent} from '#/lib/statsig/statsig'
+import {s} from '#/lib/styles'
 import {isWeb} from '#/platform/detection'
 import {emitSoftReset} from '#/state/events'
 import {
@@ -31,7 +28,6 @@ import {useSetMinimalShellMode} from '#/state/shell'
 import {useLoggedOutViewControls} from '#/state/shell/logged-out'
 import {useSelectedFeed, useSetSelectedFeed} from '#/state/shell/selected-feed'
 import {FeedPage} from '#/view/com/feeds/FeedPage'
-
 import {
   Pager,
   type PagerRef,
@@ -42,11 +38,14 @@ import {CustomFeedEmptyState} from '#/view/com/posts/CustomFeedEmptyState'
 import {FollowingEmptyState} from '#/view/com/posts/FollowingEmptyState'
 import {FollowingEndOfFeed} from '#/view/com/posts/FollowingEndOfFeed'
 import {NoFeedsPinned} from '#/screens/Home/NoFeedsPinned'
-import * as Layout from '#/components/Layout'
-import {useDemoMode} from '#/storage/hooks/demo-mode'
-import {s} from '#/lib/styles'
 import {atoms as a} from '#/alf'
 import {web} from '#/alf'
+import {ButtonIcon} from '#/components/Button'
+import {Hashtag_Stroke2_Corner0_Rounded as HashtagIcon} from '#/components/icons/Hashtag' // Added HashtagIcon import
+// import {MagnifyingGlass_Stroke2_Corner0_Rounded as SearchIcon} from '#/components/icons/MagnifyingGlass'
+import * as Layout from '#/components/Layout'
+import {Link} from '#/components/Link'
+import {useDemoMode} from '#/storage/hooks/demo-mode'
 
 type Props = NativeStackScreenProps<HomeTabNavigatorParams, 'Home' | 'Start'>
 export function HomeScreen(props: Props) {
@@ -57,7 +56,8 @@ export function HomeScreen(props: Props) {
     usePinnedFeedsInfos()
 
   React.useEffect(() => {
-    if (isWeb /* && !currentAccount */) { // currentAccount check removed
+    if (isWeb /* && !currentAccount */) {
+      // currentAccount check removed
       const getParams = new URLSearchParams(window.location.search)
       const splash = getParams.get('splash')
       if (splash === 'true') {
@@ -110,6 +110,7 @@ export function HomeScreen(props: Props) {
 function HomeScreenReady({
   preferences,
   pinnedFeedInfos,
+  // ...props
 }: Props & {
   preferences: UsePreferencesQueryResponse
   pinnedFeedInfos: SavedFeedSourceInfo[]
@@ -125,6 +126,7 @@ function HomeScreenReady({
   const selectedIndex = Math.max(0, maybeFoundIndex)
   const maybeSelectedFeed: FeedDescriptor | undefined = allFeeds[selectedIndex]
   const requestNotificationsPermission = useRequestNotificationsPermission()
+  const navigation = useNavigation<NavigationProp>()
 
   useSetTitle(pinnedFeedInfos[selectedIndex]?.displayName)
   useOTAUpdates()
@@ -155,7 +157,7 @@ function HomeScreenReady({
   )
 
   useFocusEffect(
-    React.useCallback(() => { // Changed to useCallback from useNonReactiveCallback to align with common React patterns
+    useNonReactiveCallback(() => {
       if (maybeSelectedFeed) {
         logEvent('home:feedDisplayed', {
           index: selectedIndex,
@@ -164,7 +166,7 @@ function HomeScreenReady({
           reason: 'focus',
         })
       }
-    }, [maybeSelectedFeed, selectedIndex]), // Added dependencies
+    }),
   )
 
   const onPageSelected = React.useCallback(
@@ -204,42 +206,42 @@ function HomeScreenReady({
 
   const [demoMode] = useDemoMode()
 
+  const items = React.useMemo(() => {
+    const pinnedNames = pinnedFeedInfos.map(f => f.displayName)
+    // Removed !hasSession check as per user request
+    const hasPinnedCustom = pinnedFeedInfos.some(tab => {
+      const isFollowing = tab.uri === 'following'
+      return !isFollowing
+    })
+    if (!hasPinnedCustom) {
+      return pinnedNames.concat('Feeds ✨')
+    }
+    return pinnedNames
+  }, [pinnedFeedInfos]) // 'hasSession' removed from dependency array
+
+  const onPressFeedsLink = React.useCallback(() => {
+    navigation.navigate('Feeds')
+  }, [navigation])
+
+  const onSelect = React.useCallback(
+    (index: number) => {
+      const hasPinnedCustom = pinnedFeedInfos.some(tab => {
+        const isFollowing = tab.uri === 'following'
+        return !isFollowing
+      })
+
+      if (!hasPinnedCustom && index === items.length - 1) {
+        onPressFeedsLink()
+      }
+      // else if (props.onSelect) {
+      //   props.onSelect(index)
+      // }
+    },
+    [items.length, onPressFeedsLink, pinnedFeedInfos],
+  )
+
   const renderTabBar = React.useCallback(
     (props: RenderTabBarFnProps) => {
-      const items = React.useMemo(() => {
-        const pinnedNames = pinnedFeedInfos.map(f => f.displayName)
-        // Removed !hasSession check as per user request
-        const hasPinnedCustom = pinnedFeedInfos.some(tab => {
-          const isFollowing = tab.uri === 'following'
-          return !isFollowing
-        })
-        if (!hasPinnedCustom) {
-          return pinnedNames.concat('Feeds ✨')
-        }
-        return pinnedNames
-      }, [pinnedFeedInfos]) // 'hasSession' removed from dependency array
-
-      const navigation = useNavigation<NavigationProp>()
-      const onPressFeedsLink = React.useCallback(() => {
-        navigation.navigate('Feeds')
-      }, [navigation])
-
-      const onSelect = React.useCallback(
-        (index: number) => {
-          const hasPinnedCustom = pinnedFeedInfos.some(tab => {
-            const isFollowing = tab.uri === 'following'
-            return !isFollowing
-          })
-
-          if (!hasPinnedCustom && index === items.length - 1) {
-            onPressFeedsLink()
-          } else if (props.onSelect) {
-            props.onSelect(index)
-          }
-        },
-        [items.length, onPressFeedsLink, props.onSelect, pinnedFeedInfos],
-      )
-
       return (
         <Layout.Center style={[a.z_10, web([a.sticky, {top: 0}])]}>
           <TabBar
@@ -256,7 +258,7 @@ function HomeScreenReady({
         </Layout.Center>
       )
     },
-    [onPressSelected, pinnedFeedInfos, demoMode], // 'hasSession' removed from dependency array
+    [onPressSelected, items, onSelect],
   )
 
   const renderFollowingEmptyState = React.useCallback(() => {

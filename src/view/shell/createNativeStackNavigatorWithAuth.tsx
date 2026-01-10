@@ -36,7 +36,7 @@ import {
 import {LoggedOut} from '#/view/com/auth/LoggedOut'
 import {Onboarding} from '#/screens/Onboarding'
 import {SignupQueued} from '#/screens/SignupQueued'
-import {atoms as a, useLayoutBreakpoints} from '#/alf'
+import {atoms as a, useLayoutBreakpoints, useTheme} from '#/alf'
 import {PolicyUpdateOverlay} from '#/components/PolicyUpdateOverlay'
 import {BottomBarWeb} from './bottom-bar/BottomBarWeb'
 import {DesktopLeftNav} from './desktop/LeftNav'
@@ -105,6 +105,7 @@ function NativeStackNavigator({
 
   // --- our custom logic starts here ---
   const {hasSession, currentAccount} = useSession()
+  const t = useTheme()
   // const activeRoute = state.routes[state.index]
   // const activeDescriptor = descriptors[activeRoute.key]
   // const activeRouteRequiresAuth = activeDescriptor.options.requireAuth ?? false
@@ -147,9 +148,14 @@ function NativeStackNavigator({
 
   return (
     <NavigationContent>
-      <View style={[a.flex_row, a.flex_1]}>
-        {isWeb && !showBottomBar && <DesktopLeftNav />}
-        <View role="main" style={[a.flex_1]}>
+      <View role="main" style={[a.flex_row, a.flex_1]}>
+        {isWeb && !showBottomBar && (
+          <>
+            <DesktopLeftNav />
+            <View style={[a.h_full, a.border_l, t.atoms.border_contrast_low]} />
+          </>
+        )}
+        <View style={[a.flex_1, a.overflow_auto]}>
           <NativeStackView
             {...rest}
             state={state}
